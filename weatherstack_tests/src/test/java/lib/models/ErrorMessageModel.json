@@ -1,8 +1,8 @@
 {
-  "success": "boolean",
+  "success": "false",
   "error": {
-    "code": "int",
-    "type": "string",
-    "info": "string"
+    "code": 104,
+    "type": "usage_limit_reached",
+    "info": "Your monthly API request volume has been reached. Please upgrade your plan."
   }
 }
