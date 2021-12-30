@@ -1,4 +1,4 @@
-package API;
+package lib.methods;
 
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.specification.ResponseSpecification;

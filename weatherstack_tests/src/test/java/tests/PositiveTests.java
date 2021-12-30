@@ -2,11 +2,18 @@ package tests;
 
 
 import API.APIRequest;
-import API.ErrorMessageResponseSpec;
+import lib.methods.ErrorMessageResponseSpec;
 import io.restassured.specification.RequestSpecification;
 import lib.CoreTestCase;
+import lib.methods.APIAuth;
+import lib.methods.CurrentWeatherRequestSpec;
+import lib.models.CurrentWeather;
+import lib.models.CurrentWeatherModel;
 import org.json.JSONException;
+import org.junit.Assert;
 import org.junit.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class PositiveTests extends CoreTestCase {
 
@@ -40,5 +47,15 @@ public class PositiveTests extends CoreTestCase {
 //                response.getBody().asString(),
 //                false
 //        );
+    }
+
+    @Test
+    public void testPositive() {
+        CurrentWeatherModel model = new CurrentWeather("New York").sendRequestByCity();
+        System.out.println(model.current.feelsLike);
+        System.out.println(model.current.precip);
+        System.out.println(model.location.name);
+        CurrentWeatherModel weather = new CurrentWeather("New York").createModel();
+        
     }
 }
