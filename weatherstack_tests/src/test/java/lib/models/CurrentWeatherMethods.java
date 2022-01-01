@@ -4,8 +4,9 @@ import com.google.gson.Gson;
 import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 
+import static lib.Comparator.compareAll;
+import static lib.Comparator.equalCompare;
 import static lib.methods.APIAuth.getToken;
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class CurrentWeatherMethods {
 
@@ -37,43 +38,43 @@ public class CurrentWeatherMethods {
         assertEqualRequest(exampleModel.getRequest(), actualModel.getRequest());
         assertEqualLocation(exampleModel.getLocation(), actualModel.getLocation());
         assertEqualCurrent(exampleModel.getCurrent(), actualModel.getCurrent());
+        compareAll();
     }
 
     private void assertEqualRequest(CurrentWeatherModel.Request exampleRequest, CurrentWeatherModel.Request actualRequest) {
-        assertThat(actualRequest.getType()).isEqualTo(exampleRequest.getType());
-        assertThat(actualRequest.getQuery()).isEqualTo(exampleRequest.getQuery());
-        assertThat(actualRequest.getLanguage()).isEqualTo(exampleRequest.getLanguage());
-        assertThat(actualRequest.getUnit()).isEqualTo(exampleRequest.getUnit());
+        equalCompare(exampleRequest.getType(), actualRequest.getType(), "Request type");
+        equalCompare(exampleRequest.getQuery(), actualRequest.getQuery(), "Request query");
+        equalCompare(exampleRequest.getQuery(), actualRequest.getLanguage(), "Request language");
+        equalCompare(exampleRequest.getUnit(), actualRequest.getUnit(), "Request unit");
     }
 
     private void assertEqualLocation(CurrentWeatherModel.Location exampleLocation, CurrentWeatherModel.Location actualLocation) {
-        assertThat(actualLocation.getName()).isEqualTo(exampleLocation.getName());
-        assertThat(actualLocation.getCountry()).isEqualTo(exampleLocation.getCountry());
-        assertThat(actualLocation.getRegion()).isEqualTo(exampleLocation.getRegion());
-        assertThat(actualLocation.getLat()).isEqualTo(exampleLocation.getLat());
-        assertThat(actualLocation.getLon()).isEqualTo(exampleLocation.getLon());
-        assertThat(actualLocation.getTimezoneId()).isEqualTo(exampleLocation.getTimezoneId());
-        assertThat(actualLocation.getLocalTime()).isEqualTo(exampleLocation.getLocalTime());
-        assertThat(actualLocation.getLocalTimeEpoch()).isEqualTo(exampleLocation.getLocalTimeEpoch());
-        assertThat(actualLocation.getUtcOffset()).isEqualTo(exampleLocation.getUtcOffset());
+        equalCompare(actualLocation.getName(), exampleLocation.getName(), "Location name");
+        equalCompare(actualLocation.getCountry(), exampleLocation.getCountry(), "Location country");
+        equalCompare(actualLocation.getRegion(), exampleLocation.getRegion(), "Location region");
+        equalCompare(actualLocation.getLat(), exampleLocation.getLat(), "Location lat");
+        equalCompare(actualLocation.getLon(), exampleLocation.getLon(), "Location lon");
+        equalCompare(actualLocation.getTimezoneId(), exampleLocation.getTimezoneId(), "Location timezone_id");
+        equalCompare(actualLocation.getLocalTime(), exampleLocation.getLocalTime(), "Location local_time");
+        equalCompare(actualLocation.getLocalTimeEpoch(), exampleLocation.getLocalTimeEpoch(), "Location localTime_epoch");
+        equalCompare(actualLocation.getUtcOffset(), exampleLocation.getUtcOffset(), "Location utf_offset");
     }
 
     private void assertEqualCurrent(CurrentWeatherModel.Current exampleCurrent, CurrentWeatherModel.Current actualCurrent) {
-        assertThat(actualCurrent.getObservationTime()).isEqualTo(exampleCurrent.getObservationTime());
-        assertThat(actualCurrent.getTemperature()).isEqualTo(exampleCurrent.getTemperature());
-        assertThat(actualCurrent.getWeatherCode()).isEqualTo(exampleCurrent.getWeatherCode());
-        assertThat(actualCurrent.getWeatherIcons()).isEqualTo(exampleCurrent.getWeatherIcons());
-        assertThat(actualCurrent.getWeatherDescriptions()).isEqualTo(exampleCurrent.getWeatherDescriptions());
-        assertThat(actualCurrent.getObservationTime()).isEqualTo(exampleCurrent.getObservationTime());
-        assertThat(actualCurrent.getWindSpeed()).isEqualTo(exampleCurrent.getWindSpeed());
-        assertThat(actualCurrent.getWindDegree()).isEqualTo(exampleCurrent.getWindDegree());
-        assertThat(actualCurrent.getWindDir()).isEqualTo(exampleCurrent.getWindDir());
-        assertThat(actualCurrent.getPressure()).isEqualTo(exampleCurrent.getPressure());
-        assertThat(actualCurrent.getPrecip()).isEqualTo(exampleCurrent.getPrecip());
-        assertThat(actualCurrent.getHumidity()).isEqualTo(exampleCurrent.getHumidity());
-        assertThat(actualCurrent.getCloudCover()).isEqualTo(exampleCurrent.getCloudCover());
-        assertThat(actualCurrent.getFeelsLike()).isEqualTo(exampleCurrent.getFeelsLike());
-        assertThat(actualCurrent.getUvIndex()).isEqualTo(exampleCurrent.getUvIndex());
-        assertThat(actualCurrent.getVisibility()).isEqualTo(exampleCurrent.getVisibility());
+        equalCompare(actualCurrent.getObservationTime(), exampleCurrent.getObservationTime(), "Current observation_time");
+        equalCompare(actualCurrent.getTemperature(), exampleCurrent.getTemperature(), "Current temperature");
+        equalCompare(actualCurrent.getWeatherCode(), exampleCurrent.getWeatherCode(), "Current weather_code");
+        equalCompare(actualCurrent.getWeatherIcons(), exampleCurrent.getWeatherIcons(), "Current weather_icons");
+        equalCompare(actualCurrent.getWeatherDescriptions(), exampleCurrent.getWeatherDescriptions(), "Current weather_descriptions");
+        equalCompare(actualCurrent.getWindSpeed(), exampleCurrent.getWindSpeed(), "Current wind_speed");
+        equalCompare(actualCurrent.getWindDegree(), exampleCurrent.getWindDegree(), "Current wind_degree");
+        equalCompare(actualCurrent.getWindDir(), exampleCurrent.getWindDir(), "Current wind_dir");
+        equalCompare(actualCurrent.getPressure(), exampleCurrent.getPressure(), "Current pressure");
+        equalCompare(actualCurrent.getPrecip(), exampleCurrent.getPrecip(), "Current precip");
+        equalCompare(actualCurrent.getHumidity(), exampleCurrent.getHumidity(), "Current humidity");
+        equalCompare(actualCurrent.getCloudCover(), exampleCurrent.getCloudCover(), "Current cloud_cover");
+        equalCompare(actualCurrent.getFeelsLike(), exampleCurrent.getFeelsLike(), "Current feels_like");
+        equalCompare(actualCurrent.getUvIndex(), exampleCurrent.getUvIndex(), "Current uv_index");
+        equalCompare(actualCurrent.getVisibility(), exampleCurrent.getVisibility(), "Current visibility");
     }
 }

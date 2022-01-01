@@ -4,6 +4,8 @@ package lib;
 import io.restassured.RestAssured;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
+import org.junit.rules.TestName;
 
 public class CoreTestCase {
 
@@ -20,4 +22,7 @@ public class CoreTestCase {
     public void tearDown() {
         RestAssured.reset();
     }
+
+    @Rule
+    public TestName testName = new TestName();
 }
