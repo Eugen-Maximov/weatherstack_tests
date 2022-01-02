@@ -5,7 +5,7 @@ import org.assertj.core.api.SoftAssertions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Comparator {
+public class Comparator extends CoreTestCase {
 
     private static SoftAssertions softly = new SoftAssertions();
 
@@ -25,12 +25,12 @@ public class Comparator {
         assertThat(expectedCode).isEqualTo(actualCode);
     }
 
-    public static void compareAll() {
+    public void compareAll() throws Exception {
         try {
             softly.assertAll();
         } catch (SoftAssertionError e) {
-            new AssertBodyLogger(e.getErrors());
-            //throw new SoftAssertionError(e.getErrors());
+            //new AssertBodyLogger(testName.getMethodName() ,e.getErrors()).getAssertBodiesReportLogs();
+            throw new SoftAssertionError(e.getErrors());
         }
     }
 }

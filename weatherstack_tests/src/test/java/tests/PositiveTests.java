@@ -5,13 +5,10 @@ import API.APIRequest;
 import io.restassured.specification.RequestSpecification;
 import lib.CoreTestCase;
 import lib.methods.ErrorMessageResponseSpec;
-import lib.models.CurrentWeatherExample;
-import lib.models.CurrentWeatherMethods;
-import lib.models.CurrentWeatherModel;
-import org.json.JSONException;
+import lib.models.current.CurrentWeatherExample;
+import lib.models.current.CurrentWeatherMethods;
+import lib.models.current.CurrentWeatherModel;
 import org.junit.Test;
-
-import java.io.IOException;
 
 public class PositiveTests extends CoreTestCase {
 
@@ -27,7 +24,7 @@ public class PositiveTests extends CoreTestCase {
             "}";
 
     @Test
-    public void test() throws JSONException {
+    public void test() {
         RequestSpecification request = APIRequest.request();
         request.get(requestPath).then().spec(ErrorMessageResponseSpec.response()).log().ifError();
 //        String json = response.getBody().asString();
@@ -48,10 +45,15 @@ public class PositiveTests extends CoreTestCase {
     }
 
     @Test
-    public void testPositive() throws IOException {
-        CurrentWeatherModel actualModel = new CurrentWeatherMethods("New York").sendRequestByCity();
-        CurrentWeatherModel exampleModel = new CurrentWeatherExample().createExampleModel();
+    public void testPositive() throws Exception {
+        CurrentWeatherModel actualModel = new CurrentWeatherMethods("New York", true).sendRequestByCity();
+        CurrentWeatherModel exampleModel = new CurrentWeatherExample().createMockModel();
         CurrentWeatherMethods methods = new CurrentWeatherMethods();
+        System.out.println(actualModel.getRequest().getType());
+        System.out.println(actualModel.getRequest().getQuery());
+        System.out.println(actualModel.getRequest().getLanguage());
+        System.out.println(actualModel.getRequest().getUnit());
+        System.out.println(exampleModel.getLocation().getName());
         methods.assertEqualResponseBodies(exampleModel, actualModel);
     }
 }

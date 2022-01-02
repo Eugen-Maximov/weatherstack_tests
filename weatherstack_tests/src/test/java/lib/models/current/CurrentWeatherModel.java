@@ -1,4 +1,4 @@
-package lib.models;
+package lib.models.current;
 
 import java.util.List;
 
@@ -59,10 +59,10 @@ public class CurrentWeatherModel {
         private String region;
         private String lat;
         private String lon;
-        private String timezoneId;
-        private String localTime;
-        private Number localTimeEpoch;
-        private String utcOffset;
+        private String timezone_id;
+        private String localtime;
+        private Number localtime_epoch;
+        private String utc_offset;
 
         //setters
         public Location setName(String name) {
@@ -90,23 +90,23 @@ public class CurrentWeatherModel {
             return this;
         }
 
-        public Location setTimezoneId(String timezoneId) {
-            this.timezoneId = timezoneId;
+        public Location setTimezone_id(String timezone_id) {
+            this.timezone_id = timezone_id;
             return this;
         }
 
-        public Location setLocalTime(String localTime) {
-            this.localTime = localTime;
+        public Location setLocaltime(String localtime) {
+            this.localtime = localtime;
             return this;
         }
 
-        public Location setLocalTimeEpoch(Number localTimeEpoch) {
-            this.localTimeEpoch = localTimeEpoch;
+        public Location setLocaltime_epoch(Number localtime_epoch) {
+            this.localtime_epoch = localtime_epoch;
             return this;
         }
 
-        public Location setUtcOffset(String utcOffset) {
-            this.utcOffset = utcOffset;
+        public Location setUtc_offset(String utc_offset) {
+            this.utc_offset = utc_offset;
             return this;
         }
 
@@ -131,43 +131,44 @@ public class CurrentWeatherModel {
             return lon;
         }
 
-        public String getTimezoneId() {
-            return timezoneId;
+        public String getTimezone_id() {
+            return timezone_id;
         }
 
-        public String getLocalTime() {
-            return localTime;
+        public String getLocaltime() {
+            return localtime;
         }
 
-        public Number getLocalTimeEpoch() {
-            return localTimeEpoch;
+        public Number getLocaltime_epoch() {
+            return localtime_epoch;
         }
 
-        public String getUtcOffset() {
-            return utcOffset;
+        public String getUtc_offset() {
+            return utc_offset;
         }
     }
 
     public static class Current {
-        private String observationTime;
+        private String observation_time;
         private Number temperature;
-        private Number weatherCode;
-        private List<String> weatherIcons;
-        private List<String> weatherDescriptions;
-        private Number windSpeed;
-        private Number windDegree;
-        private String windDir;
+        private Number weather_code;
+        private List<String> weather_icons;
+        private List<String> weather_descriptions;
+        private Number wind_speed;
+        private Number wind_degree;
+        private String wind_dir;
         private Number pressure;
         private Number precip;
         private Number humidity;
-        private Number cloudCover;
-        private Number feelsLike;
-        private Number uvIndex;
+        private Number cloudcover;
+        private Number feelslike;
+        private Number uv_index;
         private Number visibility;
+        private String is_day;
 
         //setters
-        public Current setObservationTime(String observationTime) {
-            this.observationTime = observationTime;
+        public Current setObservation_time(String observation_time) {
+            this.observation_time = observation_time;
             return this;
         }
 
@@ -176,33 +177,33 @@ public class CurrentWeatherModel {
             return this;
         }
 
-        public Current setWeatherCode(Number weatherCode) {
-            this.weatherCode = weatherCode;
+        public Current setWeather_code(Number weather_code) {
+            this.weather_code = weather_code;
             return this;
         }
 
-        public Current setWeatherIcons(List<String> weatherIcons) {
-            this.weatherIcons = weatherIcons;
+        public Current setWeather_icons(List<String> weather_icons) {
+            this.weather_icons = weather_icons;
             return this;
         }
 
-        public Current setWeatherDescriptions(List<String> weatherDescriptions) {
-            this.weatherDescriptions = weatherDescriptions;
+        public Current setWeather_descriptions(List<String> weather_descriptions) {
+            this.weather_descriptions = weather_descriptions;
             return this;
         }
 
-        public Current setWindSpeed(Number windSpeed) {
-            this.windSpeed = windSpeed;
+        public Current setWind_speed(Number wind_speed) {
+            this.wind_speed = wind_speed;
             return this;
         }
 
-        public Current setWindDegree(Number windDegree) {
-            this.windDegree = windDegree;
+        public Current setWind_degree(Number wind_degree) {
+            this.wind_degree = wind_degree;
             return this;
         }
 
-        public Current setWindDir(String windDir) {
-            this.windDir = windDir;
+        public Current setWind_dir(String wind_dir) {
+            this.wind_dir = wind_dir;
             return this;
         }
 
@@ -221,18 +222,18 @@ public class CurrentWeatherModel {
             return this;
         }
 
-        public Current setCloudCover(Number cloudCover) {
-            this.cloudCover = cloudCover;
+        public Current setCloudcover(Number cloudcover) {
+            this.cloudcover = cloudcover;
             return this;
         }
 
-        public Current setFeelsLike(Number feelsLike) {
-            this.feelsLike = feelsLike;
+        public Current setFeelslike(Number feelslike) {
+            this.feelslike = feelslike;
             return this;
         }
 
-        public Current setUvIndex(Number uvIndex) {
-            this.uvIndex = uvIndex;
+        public Current setUv_index(Number uv_index) {
+            this.uv_index = uv_index;
             return this;
         }
 
@@ -241,38 +242,42 @@ public class CurrentWeatherModel {
             return this;
         }
 
+        public void setIs_day(String is_day) {
+            this.is_day = is_day;
+        }
+
         //getters
 
-        public String getObservationTime() {
-            return observationTime;
+        public String getObservation_time() {
+            return observation_time;
         }
 
         public Number getTemperature() {
             return temperature;
         }
 
-        public Number getWeatherCode() {
-            return weatherCode;
+        public Number getWeather_code() {
+            return weather_code;
         }
 
-        public List<String> getWeatherIcons() {
-            return weatherIcons;
+        public List<String> getWeather_icons() {
+            return weather_icons;
         }
 
-        public List<String> getWeatherDescriptions() {
-            return weatherDescriptions;
+        public List<String> getWeather_descriptions() {
+            return weather_descriptions;
         }
 
-        public Number getWindSpeed() {
-            return windSpeed;
+        public Number getWind_speed() {
+            return wind_speed;
         }
 
-        public Number getWindDegree() {
-            return windDegree;
+        public Number getWind_degree() {
+            return wind_degree;
         }
 
-        public String getWindDir() {
-            return windDir;
+        public String getWind_dir() {
+            return wind_dir;
         }
 
         public Number getPressure() {
@@ -287,20 +292,24 @@ public class CurrentWeatherModel {
             return humidity;
         }
 
-        public Number getCloudCover() {
-            return cloudCover;
+        public Number getCloudcover() {
+            return cloudcover;
         }
 
-        public Number getFeelsLike() {
-            return feelsLike;
+        public Number getFeelslike() {
+            return feelslike;
         }
 
-        public Number getUvIndex() {
-            return uvIndex;
+        public Number getUv_index() {
+            return uv_index;
         }
 
         public Number getVisibility() {
             return visibility;
+        }
+
+        public String getIs_day() {
+            return is_day;
         }
     }
 

@@ -26,8 +26,4 @@ public class CoreTestCase {
 
     @Rule
     public TestName testName = new TestName();
-
-    public String getTestName() {
-        return testName.getMethodName();
-    }
 }
