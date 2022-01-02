@@ -11,6 +11,8 @@ import lib.models.CurrentWeatherModel;
 import org.json.JSONException;
 import org.junit.Test;
 
+import java.io.IOException;
+
 public class PositiveTests extends CoreTestCase {
 
     private static final String requestPath = "current";
@@ -46,7 +48,7 @@ public class PositiveTests extends CoreTestCase {
     }
 
     @Test
-    public void testPositive() {
+    public void testPositive() throws IOException {
         CurrentWeatherModel actualModel = new CurrentWeatherMethods("New York").sendRequestByCity();
         CurrentWeatherModel exampleModel = new CurrentWeatherExample().createExampleModel();
         CurrentWeatherMethods methods = new CurrentWeatherMethods();

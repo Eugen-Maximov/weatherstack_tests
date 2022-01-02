@@ -1,39 +1,83 @@
 package lib.models;
 
-import com.google.gson.Gson;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.qameta.allure.Step;
 import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
-import static lib.Comparator.compareAll;
-import static lib.Comparator.equalCompare;
+import java.io.IOException;
+
+import static lib.Comparator.*;
 import static lib.methods.APIAuth.getToken;
 
 public class CurrentWeatherMethods {
 
     private static final String REQUEST_PATH = "current";
-    private String CITY_NAME;
+    private String cityName;
+    private boolean isCity = false;
+    private boolean isAuth = false;
 
     public CurrentWeatherMethods(String cityName) {
-        this.CITY_NAME = cityName;
+        this.cityName = cityName;
+        this.isCity = true;
+    }
+
+    public CurrentWeatherMethods(String cityName, boolean isAuth) {
+        this.cityName = cityName;
+        this.isCity = true;
+        this.isAuth = isAuth;
     }
 
     public CurrentWeatherMethods() {
-
     }
 
-    @Step("Send request to weather in current city.")
-    public CurrentWeatherModel sendRequestByCity() {
-        String json = RestAssured
-                .given()
-                .queryParam("query", CITY_NAME)
-                .queryParam("access_key", getToken())
-                .get(REQUEST_PATH)
+    @Step("Send request to weather in current city and get actual response body")
+    public CurrentWeatherModel sendRequestByCity() throws IOException {
+        Response response = getCurrentResponse();
+        isRequestOk(response);
+        String json = response
                 .getBody()
                 .asString();
-        Gson g = new Gson();
-        return g.fromJson(json, CurrentWeatherModel.class);
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            return mapper.readValue(json, CurrentWeatherModel.class);
+        } catch (JsonProcessingException e) {
+            //e.printStackTrace();
+            throw new IOException("There is unexpected response body.\n" + "Actual body: " + e.getMessage());
+        }
     }
 
+    @Step("Checking that response status code is 200 OK")
+    public void isRequestOk(Response response) {
+        int actualCode = response.getStatusCode();
+        statusCodeAssert(actualCode, 200, "Current response status code");
+    }
+
+    private Response getCurrentResponse() {
+        RequestSpecification spec = getSpecByCityOrAuth(isCity, isAuth);
+        return RestAssured
+                .given()
+                .spec(spec)
+                .get(REQUEST_PATH);
+    }
+
+    private RequestSpecification getSpecByCityOrAuth(boolean isCity, boolean isAuth) {
+        RequestSpecification spec;
+        if (isCity && isAuth) {
+            spec = RestAssured.given().queryParam("query", cityName).queryParam("access_key", getToken());
+        } else if (!isCity && !isAuth) {
+            spec = RestAssured.given();
+        } else if (isAuth) {
+            spec = RestAssured.given().queryParam("access_key", getToken());
+        } else {
+            spec = RestAssured.given().queryParam("query", cityName);
+        }
+        return spec;
+    }
+
+    @Step("Compare actual response body with expected body")
     public void assertEqualResponseBodies(CurrentWeatherModel exampleModel, CurrentWeatherModel actualModel) {
         assertEqualRequest(exampleModel.getRequest(), actualModel.getRequest());
         assertEqualLocation(exampleModel.getLocation(), actualModel.getLocation());
