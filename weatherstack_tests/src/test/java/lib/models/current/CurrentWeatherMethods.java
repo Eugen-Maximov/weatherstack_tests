@@ -9,25 +9,26 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import lib.Comparator;
 import lib.models.errors.ErrorsMethods;
+import lib.test_data.current_request.cities.Cities;
 
 import static lib.Comparator.equalCompare;
 import static lib.Comparator.statusCodeAssert;
-import static lib.methods.APIAuth.getToken;
+import static API.APIAuth.authUser;
 
 public class CurrentWeatherMethods {
 
     private static final String REQUEST_PATH = "current";
     private String cityName;
     private boolean isCity = false;
-    private boolean isAuth = false;
+    private boolean isAuth = true;
 
-    public CurrentWeatherMethods(String cityName) {
-        this.cityName = cityName;
+    public CurrentWeatherMethods(Cities cityName) {
+        this.cityName = cityName.getName();
         this.isCity = true;
     }
 
-    public CurrentWeatherMethods(String cityName, boolean isAuth) {
-        this.cityName = cityName;
+    public CurrentWeatherMethods(Cities cityName, boolean isAuth) {
+        this.cityName = cityName.getName();
         this.isCity = true;
         this.isAuth = isAuth;
     }
@@ -73,11 +74,11 @@ public class CurrentWeatherMethods {
     private RequestSpecification getSpecByCityOrAuth(boolean isCity, boolean isAuth) {
         RequestSpecification spec;
         if (isCity && isAuth) {
-            spec = RestAssured.given().queryParam("access_key", getToken()).queryParam("query", cityName);
+            spec = RestAssured.given().spec(authUser()).queryParam("query", cityName);
         } else if (!isCity && !isAuth) {
             spec = RestAssured.given();
         } else if (isAuth) {
-            spec = RestAssured.given().queryParam("access_key", getToken());
+            spec = RestAssured.given().spec(authUser());
         } else {
             spec = RestAssured.given().queryParam("query", cityName);
         }
@@ -131,5 +132,9 @@ public class CurrentWeatherMethods {
         equalCompare(actualCurrent.getUv_index(), exampleCurrent.getUv_index(), "Current > uv_index");
         equalCompare(actualCurrent.getVisibility(), exampleCurrent.getVisibility(), "Current > visibility");
         equalCompare(actualCurrent.getIs_day(), exampleCurrent.getIs_day(), "Current > is_day");
+    }
+
+    protected static String getRequestPath() {
+        return REQUEST_PATH;
     }
 }

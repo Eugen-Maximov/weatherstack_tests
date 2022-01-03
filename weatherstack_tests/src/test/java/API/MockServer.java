@@ -1,19 +1,22 @@
-package lib.methods;
+package API;
 
+import io.restassured.RestAssured;
+import lib.CoreTestCase;
 import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.MockWebServer;
 
 import java.io.IOException;
 
-public class MockServer {
+public class MockServer extends CoreTestCase {
 
     private  MockWebServer mockWebServer;
     private  MockResponse response;
-    private  String mockURL = "http://api.weatherstack.com/current?access_key=1ad6d6000b35dffa30ed6e17ec33b366&query=New%20York";
+    private  String mockURL;
 
-    public MockServer() {
-
+    public MockServer(String mockURL) {
+        this.mockURL = mockURL;
     }
+
     public  void startMocking(String mockJson) {
         mockWebServer = new MockWebServer();
         try {
@@ -21,11 +24,11 @@ public class MockServer {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        mockWebServer.url(mockURL);
+        RestAssured.baseURI = String.valueOf(mockWebServer.url(mockURL));
         mockedResponse(mockJson);
     }
 
-    public  void mockedResponse(String mockJson) {
+    private void mockedResponse(String mockJson) {
         response = new MockResponse()
                 .setBody(mockJson);
         mockWebServer.enqueue(response);
@@ -37,5 +40,6 @@ public class MockServer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        setDefaultUri();
     }
 }

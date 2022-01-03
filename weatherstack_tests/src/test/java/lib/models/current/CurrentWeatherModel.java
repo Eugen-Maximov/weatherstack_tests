@@ -327,15 +327,18 @@ public class CurrentWeatherModel {
     }
 
     //setters
-    public void setLocation(Location location) {
+    public CurrentWeatherModel setLocation(Location location) {
         this.location = location;
+        return this;
     }
 
-    public void setRequest(Request request) {
+    public CurrentWeatherModel setRequest(Request request) {
         this.request = request;
+        return this;
     }
 
-    public void setCurrent(Current current) {
+    public CurrentWeatherModel setCurrent(Current current) {
         this.current = current;
+        return this;
     }
 }

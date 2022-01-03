@@ -1,23 +1,19 @@
-package lib.methods;
+package API;
 
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;
 
 public class APIAuth {
 
-    private static String api_key;
-
-    public APIAuth() {
-        api_key = getToken();
-    }
-
+    @Step("Set auth token param")
     public static RequestSpecification authUser() {
         return RestAssured
                 .given()
-                .queryParam("access_key", api_key);
+                .queryParam("access_key", getToken());
     }
 
-    public static String getToken() {
+    private static String getToken() {
         try {
             return System.getenv("TOKEN");
         } catch (NullPointerException e) {

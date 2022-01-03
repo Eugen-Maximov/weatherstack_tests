@@ -15,8 +15,7 @@ public class CoreTestCase {
     
     @Before
     public void setUp() {
-        RestAssured.baseURI = "http://api.weatherstack.com";
-        //RestAssured.baseURI = System.getenv("URI");
+        setDefaultUri();
     }
 
     @After
@@ -26,4 +25,9 @@ public class CoreTestCase {
 
     @Rule
     public TestName testName = new TestName();
+
+    protected void setDefaultUri() {
+        RestAssured.baseURI = "http://api.weatherstack.com";
+        //RestAssured.baseURI = System.getenv("URI");
+    }
 }

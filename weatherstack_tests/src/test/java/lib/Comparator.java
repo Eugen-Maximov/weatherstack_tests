@@ -29,8 +29,8 @@ public class Comparator extends CoreTestCase {
         try {
             softly.assertAll();
         } catch (SoftAssertionError e) {
-            //new AssertBodyLogger(testName.getMethodName() ,e.getErrors()).getAssertBodiesReportLogs();
-            throw new SoftAssertionError(e.getErrors());
+            new AssertBodyLogger(testName.getMethodName() ,e.getErrors()).getAssertBodiesReportLogs();
+            //throw new SoftAssertionError(e.getErrors());
         }
     }
 }
