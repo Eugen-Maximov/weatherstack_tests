@@ -23,17 +23,22 @@ public class CurrentWeatherMethods {
     private boolean isAuth = true;
 
     public CurrentWeatherMethods(Cities cityName) {
-        this.cityName = cityName.getName();
+        setCityName(cityName);
         this.isCity = true;
     }
 
     public CurrentWeatherMethods(Cities cityName, boolean isAuth) {
-        this.cityName = cityName.getName();
+        setCityName(cityName);
         this.isCity = true;
         this.isAuth = isAuth;
     }
 
     public CurrentWeatherMethods() {
+    }
+
+    @Step("Select city to send current request")
+    public String setCityName(Cities cities) {
+        return this.cityName = cities.getName();
     }
 
     @Step("Send request to weather in current city and get actual response body")
