@@ -4,10 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lib.methods.TimeConverter;
 import lib.models.current.CurrentWeatherModel;
 import lib.test_data.current_request.CurrentExampleBuilder;
-import lib.test_data.current_request.cities.cities_bodies.BerlinBody;
-import lib.test_data.current_request.cities.cities_bodies.LondonBody;
-import lib.test_data.current_request.cities.cities_bodies.MoscowBody;
-import lib.test_data.current_request.cities.cities_bodies.NewYorkBody;
 
 import java.io.IOException;
 
@@ -26,18 +22,7 @@ public class LocationBuilder extends CurrentExampleBuilder {
     }
 
     private static CurrentWeatherModel.Location selectCity(Cities cities) {
-        switch (cities) {
-            case MOSCOW:
-                return convertFileToJSON(MoscowBody.getJson());
-            case NEW_YORK:
-                return convertFileToJSON(NewYorkBody.getJson());
-            case BERLIN:
-                return convertFileToJSON(BerlinBody.getJson());
-            case LONDON:
-                return convertFileToJSON(LondonBody.getJson());
-            default:
-                throw new IllegalArgumentException("The selected city does not exist.");
-        }
+        return convertFileToJSON(city.getLocationJson());
     }
 
 

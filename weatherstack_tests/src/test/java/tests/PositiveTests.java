@@ -12,14 +12,15 @@ public class PositiveTests extends CoreTestCase {
 
     @Test
     public void testPositive() throws Exception {
-        Cities firstTestCity = Cities.NEW_YORK;
-
         for (Object o : Cities.values()) {
             CurrentWeatherModel actualModel = new CurrentWeatherMethods(Cities.valueOf(o.toString()))
                     .sendRequestByCity();
             CurrentWeatherModel exampleModel = new CurrentWeatherExamplesModel()
                     .createMockModel(Cities.valueOf(o.toString()));
             CurrentWeatherMethods methods = new CurrentWeatherMethods();
+            System.out.println(actualModel.getLocation().getName());
+            System.out.println(exampleModel.getLocation().getName());
+            System.out.println("==========");
             methods.assertEqualResponseBodies(exampleModel, actualModel);
         }
     }

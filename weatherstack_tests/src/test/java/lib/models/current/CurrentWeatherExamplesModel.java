@@ -13,15 +13,15 @@ public class CurrentWeatherExamplesModel extends CurrentWeatherMethods {
     public CurrentWeatherModel createMockModel(Cities city) {
         CurrentWeatherModel model;
         MockServer server = new MockServer("/" + getRequestPath());
-        server.startMocking(getStringExampleJson());
+        server.startMocking(getStringExampleJson(city));
         CurrentWeatherMethods methods = new CurrentWeatherMethods(city);
         model = methods.sendRequestByCity();
         server.stopMocking();
         return model;
     }
 
-    private String getStringExampleJson() {
-        CurrentExampleBuilder builder = new CurrentExampleBuilder(Cities.MOSCOW);
+    private String getStringExampleJson(Cities city) {
+        CurrentExampleBuilder builder = new CurrentExampleBuilder(city);
         ObjectMapper mapper = new ObjectMapper();
         try {
             return mapper.writeValueAsString(builder.getJson());
