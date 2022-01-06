@@ -1,7 +1,7 @@
 package hard_implementation.lib.requests.current_weather;
 
 import hard_implementation.API.APIAuth;
-import hard_implementation.lib.requests.current_weather.test_data_methods.Cities;
+import hard_implementation.lib.requests.current_weather.current_data.Cities;
 import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;

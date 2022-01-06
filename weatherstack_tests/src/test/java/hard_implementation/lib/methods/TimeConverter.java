@@ -7,24 +7,22 @@ import java.util.TimeZone;
 
 public class TimeConverter {
 
-    private static TimeZone timeZone;
+    private TimeZone timeZone;
 
-    public static Object[] getTimeAndDateByTimezone(String timezoneName) {
-        timeZone = TimeZone.getTimeZone(timezoneName);
-        return new Object[]{
-                getSimpleDate(),
-                getTimestamp()
-        };
+    public TimeConverter(String timeZone) {
+        this.timeZone = TimeZone.getTimeZone(timeZone);
     }
 
-    private static String getSimpleDate() {
+    public TimeConverter() {}
+
+    public String getSimpleDate() {
         Date date = new Date();
         DateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         simpleDateFormat.setTimeZone(timeZone);
         return simpleDateFormat.format(date);
     }
 
-    private static long getTimestamp() {
+    public long getTimestamp() {
         long timestamp = System.currentTimeMillis() / 1000;
         int offset = (timeZone.getRawOffset()) / 1000;
         return timestamp + offset;

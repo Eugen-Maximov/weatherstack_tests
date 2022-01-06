@@ -10,9 +10,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class Comparator {
 
-    public static List<List<String>> errorLogs = new ArrayList<>();
-
     private static SoftAssertions softly = new SoftAssertions();
+    public static int numOfLogs = 0;
+    public static List<String> errorList = new ArrayList<>();
 
     public static void equalCompare(Object expected, Object actual, String comment) {
         softly.assertThat(expected).as(comment).isEqualTo(actual);
@@ -30,11 +30,12 @@ public class Comparator {
         assertThat(expectedCode).isEqualTo(actualCode);
     }
 
-    public void compareAll() {
+    public static void compareAll() {
         try {
             softly.assertAll();
         } catch (SoftAssertionError e) {
-            errorLogs.add(e.getErrors());
+            ++numOfLogs;
+            errorList = e.getErrors();
         }
     }
 }

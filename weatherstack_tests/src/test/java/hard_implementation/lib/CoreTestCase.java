@@ -8,7 +8,6 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.rules.TestName;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CoreTestCase {
@@ -16,7 +15,7 @@ public class CoreTestCase {
     /*
     environment TOKEN for debug = 1ad6d6000b35dffa30ed6e17ec33b366
      */
-    
+
     @Before
     public void setUp() {
         setDefaultUri();
@@ -38,12 +37,11 @@ public class CoreTestCase {
 
     @Step("Checking that no error logs were generated during the tests")
     private void checkLogsForErrors() {
-        List<List<String>> errors = new ArrayList<>(Comparator.errorLogs);
-        if (errors.size() > 0) {
-            for (List<String> list : errors) {
-                new AssertBodyLogger(testName.getMethodName(), list);
-                AssertBodyLogger.getAssertBodiesReportLogs();
-            }
+        List<String> errors = Comparator.errorList;
+        if (Comparator.numOfLogs > 0) {
+            new AssertBodyLogger(testName.getMethodName(), errors);
+            AssertBodyLogger.getAssertBodiesReportLogs();
+            Comparator.numOfLogs = 0;
             throw new AssertionError("After the test run, there were discrepancies in the values.\n" +
                     "Test failed. Additional information is available in the logs.");
         }

@@ -1,4 +1,4 @@
-package hard_implementation.lib.requests.current_weather.current;
+package hard_implementation.lib.requests.current_weather;
 
 import java.util.List;
 
@@ -61,7 +61,7 @@ public class CurrentWeatherModel {
         private String lon;
         private String timezone_id;
         private String localtime;
-        private Number localtime_epoch;
+        private Long localtime_epoch;
         private String utc_offset;
 
         //setters
@@ -100,7 +100,7 @@ public class CurrentWeatherModel {
             return this;
         }
 
-        public Location setLocaltime_epoch(Number localtime_epoch) {
+        public Location setLocaltime_epoch(Long localtime_epoch) {
             this.localtime_epoch = localtime_epoch;
             return this;
         }

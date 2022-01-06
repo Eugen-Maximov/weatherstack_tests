@@ -38,12 +38,14 @@ public class ErrorModel {
     }
 
     //setters
-    public void setSuccess(String success) {
+    public ErrorModel setSuccess(String success) {
         this.success = success;
+        return this;
     }
 
-    public void setError(Message error) {
+    public ErrorModel setMessage(Message error) {
         this.error = error;
+        return this;
     }
 
     //getters
@@ -51,7 +53,7 @@ public class ErrorModel {
         return success;
     }
 
-    public Message getError() {
+    public Message getMessage() {
         return error;
     }
 }

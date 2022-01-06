@@ -1,4 +1,4 @@
-package hard_implementation.lib.requests.current_weather.current;
+package hard_implementation.lib.requests.current_weather;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -21,7 +21,7 @@ public class CurrentWeatherResponseMethods {
         try {
             return mapper.readValue(json, CurrentWeatherModel.class);
         } catch (JsonProcessingException e) {
-            ErrorsMethods.checkIsItError(json);
+            ErrorsMethods.checkIsItError(response);
             throw new JsonException("Your request is incorrect. The answer belongs to the errors model class.\n" +
                     "Your body: " + json);
         }
@@ -33,7 +33,7 @@ public class CurrentWeatherResponseMethods {
         assertEqualRequest(extendsModel.getRequest(), actualModel.getRequest());
         assertEqualLocation(extendsModel.getLocation(), actualModel.getLocation());
         assertEqualCurrent(extendsModel.getCurrent(), actualModel.getCurrent());
-        new Comparator().compareAll();
+        Comparator.compareAll();
     }
 
     @Step("Compare 'request' part of response body")

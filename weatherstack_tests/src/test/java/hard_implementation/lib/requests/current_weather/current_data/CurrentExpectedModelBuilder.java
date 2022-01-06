@@ -1,22 +1,24 @@
-package hard_implementation.lib.requests.current_weather.test_data_methods;
+package hard_implementation.lib.requests.current_weather.current_data;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import groovy.json.JsonException;
 import hard_implementation.lib.methods.TimeConverter;
-import hard_implementation.lib.requests.current_weather.current.CurrentWeatherModel;
+import hard_implementation.lib.requests.current_weather.CurrentWeatherModel;
+import io.qameta.allure.Step;
 
 import java.io.IOException;
 import java.nio.file.Paths;
 
-public class CurrentTestDataBuilder {
+public class CurrentExpectedModelBuilder {
 
     private static Cities city;
     private static CurrentWeatherModel model;
 
-    public CurrentTestDataBuilder(Cities cities) {
-        CurrentTestDataBuilder.city = cities;
+    public CurrentExpectedModelBuilder(Cities cities) {
+        CurrentExpectedModelBuilder.city = cities;
     }
 
+    @Step("Create test data model")
     public CurrentWeatherModel createTestDataModel() {
         model = getBasicJsonModel();
         setDateToModel();
@@ -27,7 +29,7 @@ public class CurrentTestDataBuilder {
     private static CurrentWeatherModel getBasicJsonModel() {
         ObjectMapper mapper = new ObjectMapper();
         try {
-            return mapper.readValue(Paths.get(city.getJsonPath()).toFile(), CurrentWeatherModel.class);
+            return mapper.readValue(Paths.get(city.getJson()).toFile(), CurrentWeatherModel.class);
         } catch (IOException e) {
             throw new JsonException("Cannot parse test data model from .json file" + e.getMessage());
         }
@@ -35,9 +37,9 @@ public class CurrentTestDataBuilder {
 
     private static void setDateToModel() {
         String timezoneId = model.getLocation().getTimezone_id();
-        Object[] timeAndDate = TimeConverter.getTimeAndDateByTimezone(timezoneId);
-        model.getLocation().setLocaltime(String.valueOf(timeAndDate[0]));
-        model.getLocation().setLocaltime_epoch((long) timeAndDate[1]);
+        TimeConverter timeConverter = new TimeConverter(timezoneId);
+        model.getLocation().setLocaltime(timeConverter.getSimpleDate());
+        model.getLocation().setLocaltime_epoch(timeConverter.getTimestamp());
     }
 
     private static void setQueryToModel() {

@@ -1,6 +1,4 @@
-package hard_implementation.lib.requests.current_weather.current;
-
-import hard_implementation.lib.requests.current_weather.RequestToCurrentWeather;
+package hard_implementation.lib.requests.current_weather;
 
 public class CurrentWeatherExtendsResult extends RequestToCurrentWeather {
 
