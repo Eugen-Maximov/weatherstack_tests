@@ -18,17 +18,21 @@ public class AssertBodyLogger extends CoreTestCase {
     private static String testName;
     private static List<String> assertErrors;
 
-    public AssertBodyLogger(String testName ,List<String> assertErrors) {
-        testName = testName;
+    public AssertBodyLogger(String testName, List<String> assertErrors) {
         AssertBodyLogger.assertErrors = assertErrors;
+        AssertBodyLogger.testName = testName;
     }
 
     @Attachment(value = "Assert bodies logs", type = "text/plain")
-    public static byte[] getAssertBodiesReportLogs() throws Exception {
+    public static byte[] getAssertBodiesReportLogs() {
         logsFileName = "body_assertion-" + testName + "-" + getSystemTime() + ".txt";
-        Path pathToAndroidLogs = createAndroidLogsFile();
-        writeAndroidLogsFile();
-        return Files.readAllBytes(pathToAndroidLogs);
+        try {
+            Path pathToAndroidLogs = createAndroidLogsFile();
+            writeAndroidLogsFile();
+            return Files.readAllBytes(pathToAndroidLogs);
+        } catch (Exception e) {
+            throw new RuntimeException("Cannot write logs to file" + e.getMessage());
+        }
     }
 
     private static Path createAndroidLogsFile() throws IOException {

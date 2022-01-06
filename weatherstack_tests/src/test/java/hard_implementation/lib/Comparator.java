@@ -3,9 +3,14 @@ package hard_implementation.lib;
 import org.assertj.core.api.SoftAssertionError;
 import org.assertj.core.api.SoftAssertions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Comparator extends CoreTestCase {
+public class Comparator {
+
+    public static List<List<String>> errorLogs = new ArrayList<>();
 
     private static SoftAssertions softly = new SoftAssertions();
 
@@ -29,8 +34,7 @@ public class Comparator extends CoreTestCase {
         try {
             softly.assertAll();
         } catch (SoftAssertionError e) {
-            //new AssertBodyLogger(testName.getMethodName() ,e.getErrors()).getAssertBodiesReportLogs();
-            throw new SoftAssertionError(e.getErrors());
+            errorLogs.add(e.getErrors());
         }
     }
 }

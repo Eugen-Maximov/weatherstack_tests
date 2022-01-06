@@ -9,6 +9,10 @@ import java.io.IOException;
 
 public class MockServer extends CoreTestCase {
 
+    /*
+    Круто, полезно но пока бессмысленно
+     */
+
     private  MockWebServer mockWebServer;
     private  MockResponse response;
     private  String mockURL;
