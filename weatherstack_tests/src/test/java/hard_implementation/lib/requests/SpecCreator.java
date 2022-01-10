@@ -7,7 +7,7 @@ import io.restassured.specification.RequestSpecification;
 public class SpecCreator {
 
     private String queryString;
-    private boolean isAuth;
+    private boolean isAuth = false;
     private RequestSpecification requestSpecification = RestAssured.given();
     private RequestSpecification authSpec;
     private RequestSpecification querySpec;

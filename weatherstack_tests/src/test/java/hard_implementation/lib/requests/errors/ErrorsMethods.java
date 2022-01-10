@@ -19,23 +19,25 @@ public class ErrorsMethods {
     public static ErrorModel parseErrorBody(Response response) {
         String jsonBody = response.getBody().asString();
         ObjectMapper mapper = new ObjectMapper();
+        System.out.println(jsonBody);
         try {
             return mapper.readValue(jsonBody, ErrorModel.class);
         } catch (JsonProcessingException error) {
+            System.out.println(error.getMessage());
             throw new JsonException("There is not error message json body.\n" + "Your json:\n" + jsonBody);
         }
     }
 
     @Step("Compare actual response body with expected body")
     public static void assertEqualsErrorBodies(ErrorModel extendsModel, ErrorModel actualModel) {
-        checkingCode = extendsModel.getMessage().getCode();
+        checkingCode = extendsModel.getError().getCode();
         equalCompare(extendsModel.getSuccess(), actualModel.getSuccess(), checkingCode + "-code: success");
-        assertEqualMessage(extendsModel.getMessage(), actualModel.getMessage());
+        assertEqualMessage(extendsModel.getError(), actualModel.getError());
         Comparator.compareAll();
     }
 
     @Step("Compare 'message' part of error response body")
-    private static void assertEqualMessage(ErrorModel.Message extendsMessage, ErrorModel.Message actualMessage) {
+    private static void assertEqualMessage(ErrorModel.Error extendsMessage, ErrorModel.Error actualMessage) {
         statusCodeAssert(extendsMessage.getCode(), actualMessage.getCode(), checkingCode + "-code: error code");
         equalCompare(extendsMessage.getType(), actualMessage.getType(), checkingCode + "-code: message type)");
         equalCompare(extendsMessage.getInfo(), actualMessage.getInfo(), checkingCode + "-code: message info)");

@@ -3,9 +3,9 @@ package hard_implementation.lib.requests.errors;
 
 public class ErrorModel {
     private String success;
-    private Message error;
+    private Error error;
 
-    public static class Message {
+    public static class Error {
         private Integer code;
         private String type;
         private String info;
@@ -43,7 +43,7 @@ public class ErrorModel {
         return this;
     }
 
-    public ErrorModel setMessage(Message error) {
+    public ErrorModel setError(Error error) {
         this.error = error;
         return this;
     }
@@ -53,7 +53,7 @@ public class ErrorModel {
         return success;
     }
 
-    public Message getMessage() {
+    public Error getError() {
         return error;
     }
 }
