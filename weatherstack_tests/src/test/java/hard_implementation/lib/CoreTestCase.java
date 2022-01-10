@@ -19,6 +19,7 @@ public class CoreTestCase {
     @Before
     public void setUp() {
         setDefaultUri();
+        RestAssured.port = 8888;
     }
 
     @After

@@ -1,0 +1,46 @@
+[Location > local_time] expected:<"2022-01-06 10:4[3]"> but was:<"2022-01-06 10:4[4]">
+[Location > localTime_epoch] expected:<16414658[38L]> but was:<16414658[40]>
+[Current > observation_time] expected:<"0[1:58] PM"> but was:<"0[3:44] PM">
+[Current > temperature] expected:<[11]> but was:<[3]>
+[Current > weather_code] expected:<1[43]> but was:<1[16]>
+[Current > weather_icons] expected:<...1_png_64/wsymbol_000[6_mist].png"]> but was:<...1_png_64/wsymbol_000[2_sunny_intervals].png"]>
+[Current > weather_descriptions] expected:<["[Mist]"]> but was:<["[Partly cloudy]"]>
+[Current > wind_speed] expected:<[0]> but was:<[22]>
+[Current > wind_degree] expected:<[]0> but was:<[29]0>
+[Current > wind_dir] expected:<"[N]"> but was:<"[WNW]">
+[Current > pressure] expected:<10[01]> but was:<10[13]>
+[Current > humidity] expected:<[93]> but was:<[42]>
+[Current > cloud_cover] expected:<[100]> but was:<[75]>
+[Current > feels_like] expected:<[10]> but was:<[-1]>
+[Current > visibility] expected:<[8]> but was:<[16]>
+[Location > localTime_epoch] expected:<164149464[2L]> but was:<164149464[0]>
+[Current > observation_time] expected:<"0[1]:44 PM"> but was:<"0[3]:44 PM">
+[Current > weather_code] expected:<1[22]> but was:<1[16]>
+[Current > weather_descriptions] expected:<["[Overcast]"]> but was:<["[Partly cloudy]"]>
+[Current > wind_speed] expected:<1[5]> but was:<1[9]>
+[Current > wind_degree] expected:<2[1]0> but was:<2[0]0>
+[Current > cloud_cover] expected:<[100]> but was:<[75]>
+[Current > feels_like] expected:<-[4]> but was:<-[5]>
+[Location > localTime_epoch] expected:<164148744[2L]> but was:<164148744[0]>
+[Current > observation_time] expected:<"0[1:47] PM"> but was:<"0[3:44] PM">
+[Current > temperature] expected:<[3]> but was:<[1]>
+[Current > weather_icons] expected:<...1_png_64/wsymbol_000[1_sunny].png"]> but was:<...1_png_64/wsymbol_000[8_clear_sky_night].png"]>
+[Current > weather_descriptions] expected:<["[Sunny]"]> but was:<["[Clear]"]>
+[Current > wind_speed] expected:<[1]7> but was:<[]7>
+[Current > wind_degree] expected:<[30]0> but was:<[26]0>
+[Current > wind_dir] expected:<"W[NW]"> but was:<"W[]">
+[Current > pressure] expected:<101[6]> but was:<101[7]>
+[Current > humidity] expected:<[48]> but was:<[69]>
+[Current > feels_like] expected:<-[1]> but was:<-[3]>
+[Current > is_day] expected:<"[yes]"> but was:<"[no]">
+[Location > localTime_epoch] expected:<164148384[3L]> but was:<164148384[0]>
+[Current > observation_time] expected:<"0[1:48] PM"> but was:<"0[3:44] PM">
+[Current > temperature] expected:<[4]> but was:<[6]>
+[Current > weather_code] expected:<[302]> but was:<[113]>
+[Current > weather_icons] expected:<...01_png_64/wsymbol_00[18_cloudy_with_heavy_rain].png"]> but was:<...01_png_64/wsymbol_00[01_sunny].png"]>
+[Current > weather_descriptions] expected:<["[Rain]"]> but was:<["[Sunny]"]>
+[Current > wind_speed] expected:<1[3]> but was:<1[9]>
+[Current > wind_degree] expected:<1[8]0> but was:<1[9]0>
+[Current > pressure] expected:<101[6]> but was:<101[3]>
+[Current > cloud_cover] expected:<[75]> but was:<[0]>
+[Current > feels_like] expected:<[1]> but was:<[3]>

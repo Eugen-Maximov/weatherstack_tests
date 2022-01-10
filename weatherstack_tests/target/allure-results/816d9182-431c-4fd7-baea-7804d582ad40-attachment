@@ -1,0 +1,36 @@
+[Request > query] expected:<"[New York, United States of Americ]a"> but was:<"[Moscow, Russi]a">
+[Location > name] expected:<"[Moscow]"> but was:<"[New York]">
+[Location > country] expected:<"[Russi]a"> but was:<"[United States of Americ]a">
+[Location > region] expected:<"[Moscow City]"> but was:<"[New York]">
+[Location > lat] expected:<"[55.752]"> but was:<"[40.714]">
+[Location > lon] expected:<"[37.61]6"> but was:<"[-74.00]6">
+[Location > timezone_id] expected:<"[Europe/Moscow]"> but was:<"[America/New_York]">
+[Location > local_time] expected:<"2022-01-04 [12:36]"> but was:<"2022-01-04 [04:35]">
+[Location > localTime_epoch] expected:<16412[9978]0> but was:<16412[7090]0>
+[Location > utf_offset] expected:<"[3].0"> but was:<"[-5].0">
+[Current > observation_time] expected:<"0[1:58 P]M"> but was:<"0[9:35 A]M">
+[Current > temperature] expected:<[11]> but was:<[-6]>
+[Current > weather_code] expected:<1[4]3> but was:<1[1]3>
+[Current > weather_icons] expected:<...1_png_64/wsymbol_000[6_mis]t.png"]> but was:<...1_png_64/wsymbol_000[8_clear_sky_nigh]t.png"]>
+[Current > weather_descriptions] expected:<["[Mist]"]> but was:<["[Clear]"]>
+[Current > wind_speed] expected:<[0]> but was:<[22]>
+[Current > wind_degree] expected:<[]0> but was:<[30]0>
+[Current > wind_dir] expected:<"[N]"> but was:<"[WNW]">
+[Current > pressure] expected:<10[01]> but was:<10[28]>
+[Current > humidity] expected:<[93]> but was:<[55]>
+[Current > cloud_cover] expected:<[10]0> but was:<[]0>
+[Current > feels_like] expected:<[10]> but was:<[-12]>
+[Current > visibility] expected:<[8]> but was:<[16]>
+[Current > is_day] expected:<"[yes]"> but was:<"[no]">
+[Location > localTime_epoch] expected:<16412997[86]> but was:<16412997[60]>
+[Current > observation_time] expected:<"0[1:58 P]M"> but was:<"0[9:36 A]M">
+[Current > temperature] expected:<[11]> but was:<[-8]>
+[Current > weather_code] expected:<1[43]> but was:<1[16]>
+[Current > weather_icons] expected:<...1_png_64/wsymbol_000[6_mist].png"]> but was:<...1_png_64/wsymbol_000[2_sunny_intervals].png"]>
+[Current > weather_descriptions] expected:<["[Mist]"]> but was:<["[Partly cloudy]"]>
+[Current > wind_speed] expected:<[0]> but was:<[7]>
+[Current > wind_degree] expected:<[]0> but was:<[13]0>
+[Current > wind_dir] expected:<"[N]"> but was:<"[SE]">
+[Current > humidity] expected:<[93]> but was:<[85]>
+[Current > cloud_cover] expected:<[10]0> but was:<[5]0>
+[Current > feels_like] expected:<[10]> but was:<[-11]>
