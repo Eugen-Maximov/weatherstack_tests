@@ -1,0 +1,15 @@
+[Location > local_time] expected:<"2022-01-06 10:4[8]"> but was:<"2022-01-06 10:4[4]">
+[Location > localTime_epoch] expected:<164146[6082L]> but was:<164146[5840]>
+[Current > observation_time] expected:<"0[1:58] PM"> but was:<"0[3:44] PM">
+[Current > temperature] expected:<[11]> but was:<[3]>
+[Current > weather_code] expected:<1[43]> but was:<1[16]>
+[Current > weather_icons] expected:<...1_png_64/wsymbol_000[6_mist].png"]> but was:<...1_png_64/wsymbol_000[2_sunny_intervals].png"]>
+[Current > weather_descriptions] expected:<["[Mist]"]> but was:<["[Partly cloudy]"]>
+[Current > wind_speed] expected:<[0]> but was:<[22]>
+[Current > wind_degree] expected:<[]0> but was:<[29]0>
+[Current > wind_dir] expected:<"[N]"> but was:<"[WNW]">
+[Current > pressure] expected:<10[01]> but was:<10[13]>
+[Current > humidity] expected:<[93]> but was:<[42]>
+[Current > cloud_cover] expected:<[100]> but was:<[75]>
+[Current > feels_like] expected:<[10]> but was:<[-1]>
+[Current > visibility] expected:<[8]> but was:<[16]>

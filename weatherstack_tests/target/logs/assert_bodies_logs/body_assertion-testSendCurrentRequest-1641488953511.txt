@@ -1,0 +1,54 @@
+[New York.Location > local_time] expected:<"2022-01-06 12:0[9]"> but was:<"2022-01-06 12:0[4]">
+[New York.Location > localTime_epoch] expected:<1641470[949]L> but was:<1641470[640]L>
+[New York.Current > observation_time] expected:<"0[1:58] PM"> but was:<"0[5:04] PM">
+[New York.Current > temperature] expected:<[11]> but was:<[3]>
+[New York.Current > weather_code] expected:<1[43]> but was:<1[16]>
+[New York.Current > weather_icons] expected:<...1_png_64/wsymbol_000[6_mist].png"]> but was:<...1_png_64/wsymbol_000[2_sunny_intervals].png"]>
+[New York.Current > weather_descriptions] expected:<["[Mist]"]> but was:<["[Partly cloudy]"]>
+[New York.Current > wind_speed] expected:<[0]> but was:<[24]>
+[New York.Current > wind_degree] expected:<[]0> but was:<[27]0>
+[New York.Current > wind_dir] expected:<"[N]"> but was:<"[W]">
+[New York.Current > pressure] expected:<10[01]> but was:<10[14]>
+[New York.Current > humidity] expected:<[93]> but was:<[37]>
+[New York.Current > cloud_cover] expected:<[100]> but was:<[75]>
+[New York.Current > feels_like] expected:<[10]> but was:<[-1]>
+[New York.Current > uv_index] expected:<[1]> but was:<[2]>
+[New York.Current > visibility] expected:<[8]> but was:<[16]>
+[Moscow.Location > local_time] expected:<"2022-01-06 20:0[9]"> but was:<"2022-01-06 20:0[5]">
+[Moscow.Location > localTime_epoch] expected:<1641499[752]L> but was:<1641499[500]L>
+[Moscow.Current > observation_time] expected:<"0[1:44] PM"> but was:<"0[5:05] PM">
+[Moscow.Current > weather_code] expected:<1[22]> but was:<1[16]>
+[Moscow.Current > weather_descriptions] expected:<["[Overcast]"]> but was:<["[Partly cloudy]"]>
+[Moscow.Current > wind_speed] expected:<[15]> but was:<[26]>
+[Moscow.Current > wind_degree] expected:<2[1]0> but was:<2[2]0>
+[Moscow.Current > wind_dir] expected:<"S[S]W"> but was:<"S[]W">
+[Moscow.Current > humidity] expected:<8[6]> but was:<8[0]>
+[Moscow.Current > cloud_cover] expected:<[100]> but was:<[75]>
+[Berlin.Location > local_time] expected:<"2022-01-06 18:0[9]"> but was:<"2022-01-06 18:0[7]">
+[Berlin.Location > localTime_epoch] expected:<1641492[552]L> but was:<1641492[420]L>
+[Berlin.Current > observation_time] expected:<"0[1:4]7 PM"> but was:<"0[5:0]7 PM">
+[Berlin.Current > temperature] expected:<[3]> but was:<[0]>
+[Berlin.Current > weather_icons] expected:<...1_png_64/wsymbol_000[1_sunny].png"]> but was:<...1_png_64/wsymbol_000[8_clear_sky_night].png"]>
+[Berlin.Current > weather_descriptions] expected:<["[Sunny]"]> but was:<["[Clear]"]>
+[Berlin.Current > wind_speed] expected:<[1]7> but was:<[]7>
+[Berlin.Current > wind_degree] expected:<[30]0> but was:<[23]0>
+[Berlin.Current > wind_dir] expected:<"[WN]W"> but was:<"[S]W">
+[Berlin.Current > pressure] expected:<101[6]> but was:<101[8]>
+[Berlin.Current > humidity] expected:<[48]> but was:<[74]>
+[Berlin.Current > feels_like] expected:<-[1]> but was:<-[2]>
+[Berlin.Current > uv_index] expected:<[2]> but was:<[1]>
+[Berlin.Current > is_day] expected:<"[yes]"> but was:<"[no]">
+[London.Location > localTime_epoch] expected:<16414889[53]L> but was:<16414889[40]L>
+[London.Current > observation_time] expected:<"0[1:48] PM"> but was:<"0[5:09] PM">
+[London.Current > temperature] expected:<[4]> but was:<[7]>
+[London.Current > weather_code] expected:<[302]> but was:<[296]>
+[London.Current > weather_icons] expected:<...01_png_64/wsymbol_00[18_cloudy_with_heavy_rain].png"]> but was:<...01_png_64/wsymbol_00[33_cloudy_with_light_rain_night].png"]>
+[London.Current > weather_descriptions] expected:<["[]Rain"]> but was:<["[Light Rain, ]Rain"]>
+[London.Current > wind_speed] expected:<[13]> but was:<[20]>
+[London.Current > wind_degree] expected:<[18]0> but was:<[20]0>
+[London.Current > wind_dir] expected:<"S[]"> but was:<"S[SW]">
+[London.Current > pressure] expected:<101[6]> but was:<101[2]>
+[London.Current > humidity] expected:<7[5]> but was:<7[0]>
+[London.Current > cloud_cover] expected:<[7]5> but was:<[2]5>
+[London.Current > feels_like] expected:<[1]> but was:<[4]>
+[London.Current > is_day] expected:<"[yes]"> but was:<"[no]">

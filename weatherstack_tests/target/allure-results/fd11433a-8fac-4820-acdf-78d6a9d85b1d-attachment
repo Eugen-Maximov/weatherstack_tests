@@ -1,0 +1,22 @@
+[Request language] expected:<"[en]"> but was:<"[New York, United States of America]">
+[Location local_time] expected:<"20[19-09-07 08:14]"> but was:<"20[22-01-02 07:33]">
+[Location localTime_epoch] expected:<1[56784404]0> but was:<1[64110878]0>
+[Location utf_offset] expected:<"-[4].0"> but was:<"-[5].0">
+[Current observation_time] expected:<"12:[14] PM"> but was:<"12:[33] PM">
+[Current temperature] expected:<1[3]> but was:<1[2]>
+[Current weather_code] expected:<1[1]3> but was:<1[4]3>
+[Current weather_icons] expected:<...1_png_64/wsymbol_000[1_sunny].png"]> but was:<...1_png_64/wsymbol_000[6_mist].png"]>
+[Current weather_descriptions] expected:<["[Sunny]"]> but was:<["[Mist]"]>
+[Current wind_speed] expected:<[0]> but was:<[6]>
+[Current wind_degree] expected:<[349]> but was:<[230]>
+[Current wind_dir] expected:<"[N]"> but was:<"[SW]">
+[Current pressure] expected:<10[10]> but was:<10[01]>
+[Current precip] 
+expected: "0 (Integer@2552181d)"
+ but was: "0 (LazilyParsedNumber@51d9fd30)"
+at Comparator.equalCompare(Comparator.java:13)
+[Current humidity] expected:<[90]> but was:<[89]>
+[Current cloud_cover] expected:<[]0> but was:<[10]0>
+[Current feels_like] expected:<1[3]> but was:<1[2]>
+[Current uv_index] expected:<[4]> but was:<[1]>
+[Current visibility] expected:<[16]> but was:<[8]>

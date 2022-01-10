@@ -1,0 +1,56 @@
+[New York.Location > local_time] expected:<"2022-01-07 09:2[5]"> but was:<"2022-01-07 09:2[1]">
+[New York.Location > localTime_epoch] expected:<1641547[507]L> but was:<1641547[260]L>
+[New York.Current > observation_time] expected:<"0[1:58] PM"> but was:<"0[2:21] PM">
+[New York.Current > temperature] expected:<[1]1> but was:<[-]1>
+[New York.Current > weather_code] expected:<[143]> but was:<[326]>
+[New York.Current > weather_icons] expected:<...01_png_64/wsymbol_00[06_mist].png"]> but was:<...01_png_64/wsymbol_00[11_light_snow_showers].png"]>
+[New York.Current > weather_descriptions] expected:<["[Mist]"]> but was:<["[Light Snow]"]>
+[New York.Current > wind_speed] expected:<[0]> but was:<[22]>
+[New York.Current > wind_degree] expected:<[]0> but was:<[32]0>
+[New York.Current > wind_dir] expected:<"N[]"> but was:<"N[W]">
+[New York.Current > pressure] expected:<100[1]> but was:<100[9]>
+[New York.Current > precip] expected:<[0]> but was:<[8.4]>
+[New York.Current > humidity] expected:<[93]> but was:<[81]>
+[New York.Current > feels_like] expected:<[10]> but was:<[-6]>
+[New York.Current > visibility] expected:<[8]> but was:<[2]>
+[Moscow.Location > local_time] expected:<"2022-01-07 17:2[5]"> but was:<"2022-01-07 17:2[3]">
+[Moscow.Location > localTime_epoch] expected:<1641576[311]L> but was:<1641576[180]L>
+[Moscow.Current > observation_time] expected:<"0[1:44] PM"> but was:<"0[2:23] PM">
+[Moscow.Current > temperature] expected:<[0]> but was:<[-6]>
+[Moscow.Current > weather_code] expected:<[122]> but was:<[227]>
+[Moscow.Current > weather_icons] expected:<...01_png_64/wsymbol_00[04_black_low_cloud].png"]> but was:<...01_png_64/wsymbol_00[35_cloudy_with_light_snow_night].png"]>
+[Moscow.Current > weather_descriptions] expected:<["[Overcast]"]> but was:<["[Snow Shower, Blowing Snow]"]>
+[Moscow.Current > wind_speed] expected:<[15]> but was:<[31]>
+[Moscow.Current > wind_degree] expected:<2[1]0> but was:<2[6]0>
+[Moscow.Current > wind_dir] expected:<"[SS]W"> but was:<"[]W">
+[Moscow.Current > pressure] expected:<[99]3> but was:<[100]3>
+[Moscow.Current > humidity] expected:<[86]> but was:<[79]>
+[Moscow.Current > cloud_cover] expected:<[100]> but was:<[75]>
+[Moscow.Current > feels_like] expected:<-[4]> but was:<-[13]>
+[Berlin.Location > localTime_epoch] expected:<16415691[11]L> but was:<16415691[00]L>
+[Berlin.Current > observation_time] expected:<"0[1:47] PM"> but was:<"0[2:25] PM">
+[Berlin.Current > temperature] expected:<[3]> but was:<[2]>
+[Berlin.Current > weather_code] expected:<[113]> but was:<[317]>
+[Berlin.Current > weather_icons] expected:<...01_png_64/wsymbol_00[01_sunny].png"]> but was:<...01_png_64/wsymbol_00[21_cloudy_with_sleet].png"]>
+[Berlin.Current > weather_descriptions] expected:<["[Sunny]"]> but was:<["[Light Rain And Snow]"]>
+[Berlin.Current > wind_speed] expected:<[17]> but was:<[30]>
+[Berlin.Current > wind_degree] expected:<[30]0> but was:<[21]0>
+[Berlin.Current > wind_dir] expected:<"[WN]W"> but was:<"[SS]W">
+[Berlin.Current > pressure] expected:<101[6]> but was:<101[2]>
+[Berlin.Current > humidity] expected:<[48]> but was:<[87]>
+[Berlin.Current > cloud_cover] expected:<[0]> but was:<[75]>
+[Berlin.Current > feels_like] expected:<-[1]> but was:<-[3]>
+[Berlin.Current > uv_index] expected:<[2]> but was:<[1]>
+[London.Location > local_time] expected:<"2022-01-07 14:2[5]"> but was:<"2022-01-07 14:2[4]">
+[London.Location > localTime_epoch] expected:<1641565[512]L> but was:<1641565[440]L>
+[London.Current > observation_time] expected:<"0[1:48] PM"> but was:<"0[2:24] PM">
+[London.Current > temperature] expected:<[4]> but was:<[5]>
+[London.Current > weather_code] expected:<[302]> but was:<[113]>
+[London.Current > weather_icons] expected:<...01_png_64/wsymbol_00[18_cloudy_with_heavy_rain].png"]> but was:<...01_png_64/wsymbol_00[01_sunny].png"]>
+[London.Current > weather_descriptions] expected:<["[Rain]"]> but was:<["[Sunny]"]>
+[London.Current > wind_speed] expected:<[13]> but was:<[20]>
+[London.Current > wind_degree] expected:<[18]0> but was:<[26]0>
+[London.Current > wind_dir] expected:<"[S]"> but was:<"[W]">
+[London.Current > pressure] expected:<101[6]> but was:<101[0]>
+[London.Current > humidity] expected:<7[5]> but was:<7[0]>
+[London.Current > cloud_cover] expected:<[75]> but was:<[0]>

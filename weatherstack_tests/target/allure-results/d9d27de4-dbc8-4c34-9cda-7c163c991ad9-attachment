@@ -1,0 +1,17 @@
+New York
+[New York.Location > local_time] expected:<"2022-01-06 11:2[8]"> but was:<"2022-01-06 11:2[7]">
+[New York.Location > localTime_epoch] expected:<16414684[85L]> but was:<16414684[20]>
+[New York.Current > observation_time] expected:<"0[1:58] PM"> but was:<"0[4:27] PM">
+[New York.Current > temperature] expected:<[11]> but was:<[3]>
+[New York.Current > weather_code] expected:<1[43]> but was:<1[16]>
+[New York.Current > weather_icons] expected:<...1_png_64/wsymbol_000[6_mist].png"]> but was:<...1_png_64/wsymbol_000[2_sunny_intervals].png"]>
+[New York.Current > weather_descriptions] expected:<["[Mist]"]> but was:<["[Partly cloudy]"]>
+[New York.Current > wind_speed] expected:<[0]> but was:<[24]>
+[New York.Current > wind_degree] expected:<[]0> but was:<[27]0>
+[New York.Current > wind_dir] expected:<"[N]"> but was:<"[W]">
+[New York.Current > pressure] expected:<10[01]> but was:<10[14]>
+[New York.Current > humidity] expected:<[93]> but was:<[37]>
+[New York.Current > cloud_cover] expected:<[100]> but was:<[75]>
+[New York.Current > feels_like] expected:<[10]> but was:<[-1]>
+[New York.Current > uv_index] expected:<[1]> but was:<[2]>
+[New York.Current > visibility] expected:<[8]> but was:<[16]>

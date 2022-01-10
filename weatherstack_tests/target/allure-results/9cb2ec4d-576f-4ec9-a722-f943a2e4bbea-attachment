@@ -1,0 +1,48 @@
+[New York.Location > local_time] expected:<"2022-01-06 12:3[7]"> but was:<"2022-01-06 12:3[6]">
+[New York.Location > localTime_epoch] expected:<1641472[638]L> but was:<1641472[560]L>
+[New York.Current > observation_time] expected:<"0[1:58] PM"> but was:<"0[5:36] PM">
+[New York.Current > temperature] expected:<[11]> but was:<[4]>
+[New York.Current > weather_code] expected:<1[43]> but was:<1[22]>
+[New York.Current > weather_icons] expected:<...1_png_64/wsymbol_000[6_mist].png"]> but was:<...1_png_64/wsymbol_000[4_black_low_cloud].png"]>
+[New York.Current > weather_descriptions] expected:<["[Mi]st"]> but was:<["[Overca]st"]>
+[New York.Current > wind_speed] expected:<[0]> but was:<[26]>
+[New York.Current > wind_degree] expected:<[]0> but was:<[27]0>
+[New York.Current > wind_dir] expected:<"[N]"> but was:<"[W]">
+[New York.Current > pressure] expected:<10[01]> but was:<10[13]>
+[New York.Current > humidity] expected:<[93]> but was:<[35]>
+[New York.Current > feels_like] expected:<[1]0> but was:<[]0>
+[New York.Current > uv_index] expected:<[1]> but was:<[2]>
+[New York.Current > visibility] expected:<[8]> but was:<[16]>
+[Moscow.Location > localTime_epoch] expected:<16415014[42]L> but was:<16415014[20]L>
+[Moscow.Current > observation_time] expected:<"0[1:44] PM"> but was:<"0[5:37] PM">
+[Moscow.Current > weather_code] expected:<1[22]> but was:<1[16]>
+[Moscow.Current > weather_descriptions] expected:<["[Overcast]"]> but was:<["[Partly cloudy]"]>
+[Moscow.Current > wind_speed] expected:<[15]> but was:<[22]>
+[Moscow.Current > wind_degree] expected:<2[1]0> but was:<2[3]0>
+[Moscow.Current > wind_dir] expected:<"S[S]W"> but was:<"S[]W">
+[Moscow.Current > cloud_cover] expected:<[100]> but was:<[75]>
+[Berlin.Location > localTime_epoch] expected:<16414942[43]L> but was:<16414942[20]L>
+[Berlin.Current > observation_time] expected:<"0[1:4]7 PM"> but was:<"0[5:3]7 PM">
+[Berlin.Current > temperature] expected:<[3]> but was:<[-1]>
+[Berlin.Current > weather_icons] expected:<...1_png_64/wsymbol_000[1_sunny].png"]> but was:<...1_png_64/wsymbol_000[8_clear_sky_night].png"]>
+[Berlin.Current > weather_descriptions] expected:<["[Sunny]"]> but was:<["[Clear]"]>
+[Berlin.Current > wind_speed] expected:<[17]> but was:<[9]>
+[Berlin.Current > wind_degree] expected:<[30]0> but was:<[21]0>
+[Berlin.Current > wind_dir] expected:<"[WN]W"> but was:<"[SS]W">
+[Berlin.Current > pressure] expected:<101[6]> but was:<101[8]>
+[Berlin.Current > humidity] expected:<[48]> but was:<[80]>
+[Berlin.Current > feels_like] expected:<-[1]> but was:<-[4]>
+[Berlin.Current > uv_index] expected:<[2]> but was:<[1]>
+[Berlin.Current > is_day] expected:<"[yes]"> but was:<"[no]">
+[London.Location > local_time] expected:<"2022-01-06 17:3[7]"> but was:<"2022-01-06 17:3[6]">
+[London.Location > localTime_epoch] expected:<1641490[644]L> but was:<1641490[560]L>
+[London.Current > observation_time] expected:<"0[1:48] PM"> but was:<"0[5:36] PM">
+[London.Current > temperature] expected:<[4]> but was:<[7]>
+[London.Current > weather_icons] expected:<...01_png_64/wsymbol_00[18_cloudy_with_heavy_rain].png"]> but was:<...01_png_64/wsymbol_00[34_cloudy_with_heavy_rain_night].png"]>
+[London.Current > wind_speed] expected:<[13]> but was:<[24]>
+[London.Current > wind_degree] expected:<[18]0> but was:<[21]0>
+[London.Current > wind_dir] expected:<"S[]"> but was:<"S[SW]">
+[London.Current > pressure] expected:<101[6]> but was:<101[2]>
+[London.Current > humidity] expected:<7[5]> but was:<7[6]>
+[London.Current > feels_like] expected:<[1]> but was:<[4]>
+[London.Current > is_day] expected:<"[yes]"> but was:<"[no]">
