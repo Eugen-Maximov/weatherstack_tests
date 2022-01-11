@@ -23,7 +23,6 @@ public class ErrorsMethods {
         try {
             return mapper.readValue(jsonBody, ErrorModel.class);
         } catch (JsonProcessingException error) {
-            System.out.println(error.getMessage());
             throw new JsonException("There is not error message json body.\n" + "Your json:\n" + jsonBody);
         }
     }

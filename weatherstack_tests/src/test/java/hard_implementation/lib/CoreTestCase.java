@@ -13,7 +13,8 @@ import java.util.List;
 public class CoreTestCase {
 
     /*
-    environment TOKEN for debug = 1ad6d6000b35dffa30ed6e17ec33b366
+    environment TOKEN for debug = 1ad6d6000b35dffa30ed6e17ec33b366 - истек лимит
+    новый - ed0cec3065036a4f388505daf48222d8
      */
 
     @Before
