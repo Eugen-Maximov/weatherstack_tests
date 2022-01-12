@@ -1,12 +1,26 @@
 package hard_implementation.lib.requests.current_weather;
 
 import java.util.List;
+import java.util.Objects;
 
 public class CurrentWeatherModel {
 
     public Request request;
     public Location location;
     public Current current;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CurrentWeatherModel that = (CurrentWeatherModel) o;
+        return Objects.equals(request, that.request) && Objects.equals(location, that.location) && Objects.equals(current, that.current);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(request, location, current);
+    }
 
     public static class Request {
         private String type;
