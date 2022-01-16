@@ -28,6 +28,19 @@ public class CurrentWeatherModel {
         private String language;
         private String unit;
 
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Request request = (Request) o;
+            return Objects.equals(type, request.type) && Objects.equals(query, request.query) && Objects.equals(language, request.language) && Objects.equals(unit, request.unit);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(type, query, language, unit);
+        }
+
         //setters
         public Request setType(String type) {
             this.type = type;

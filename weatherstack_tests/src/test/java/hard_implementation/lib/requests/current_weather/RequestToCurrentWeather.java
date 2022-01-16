@@ -3,6 +3,7 @@ package hard_implementation.lib.requests.current_weather;
 import hard_implementation.lib.requests.GetRequest;
 import hard_implementation.lib.requests.SpecCreator;
 import hard_implementation.lib.requests.current_weather.current_data.Cities;
+import io.cucumber.java.ru.Когда;
 import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -33,6 +34,7 @@ public class RequestToCurrentWeather {
     public RequestToCurrentWeather() {
     }
 
+    @Когда("отправить get запрос на получение погоды по выбранному городу")
     @Step("Send GET request to /current weather")
     public Response sendRequestToCurrent() {
         requestSpecification = specCreator.getSpecification();

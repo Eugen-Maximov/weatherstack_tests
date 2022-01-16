@@ -1,6 +1,6 @@
 package hard_implementation.lib.requests.current_weather;
 
-public class CurrentWeatherExtendsResult extends RequestToCurrentWeather {
+public class CurrentWeatherExtendsResult {
 
     /*
     Закомментил тк смысла в подмене ответов нет
