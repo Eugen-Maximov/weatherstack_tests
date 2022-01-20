@@ -1,4 +1,4 @@
-package hard_implementation.lib.requests.current_weather;
+package lib.requests.current_weather;
 
 public class CurrentWeatherExtendsResult {
 

@@ -1,8 +1,8 @@
-package hard_implementation.lib.requests.current_weather;
+package lib.requests.current_weather;
 
-import hard_implementation.lib.requests.GetRequest;
-import hard_implementation.lib.requests.SpecCreator;
-import hard_implementation.lib.requests.current_weather.current_data.Cities;
+import lib.requests.GetRequest;
+import lib.requests.SpecCreator;
+import lib.requests.current_weather.current_data.Cities;
 import io.cucumber.java.ru.Когда;
 import io.qameta.allure.Step;
 import io.restassured.RestAssured;

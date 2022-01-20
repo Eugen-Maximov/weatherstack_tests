@@ -1,14 +1,14 @@
-package hard_implementation.lib.requests.current_weather;
+package lib.requests.current_weather;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import groovy.json.JsonException;
-import hard_implementation.lib.Comparator;
-import hard_implementation.lib.requests.errors.ErrorsMethods;
+import lib.Comparator;
+import lib.requests.errors.ErrorsMethods;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
-import static hard_implementation.lib.Comparator.equalCompare;
+import static lib.Comparator.equalCompare;
 
 public class CurrentWeatherResponseMethods {
 

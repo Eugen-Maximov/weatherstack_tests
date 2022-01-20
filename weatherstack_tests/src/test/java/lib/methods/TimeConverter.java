@@ -1,4 +1,4 @@
-package hard_implementation.lib.methods;
+package lib.methods;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

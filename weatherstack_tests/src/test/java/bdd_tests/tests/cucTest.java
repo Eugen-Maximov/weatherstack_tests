@@ -1,10 +1,10 @@
-package hard_implementation.bdd_tests.tests;
+package bdd_tests.tests;
 
-import hard_implementation.lib.requests.current_weather.CurrentWeatherModel;
-import hard_implementation.lib.requests.current_weather.CurrentWeatherResponseMethods;
-import hard_implementation.lib.requests.current_weather.RequestToCurrentWeather;
-import hard_implementation.lib.requests.current_weather.current_data.Cities;
-import hard_implementation.lib.requests.current_weather.current_data.CurrentExpectedModelBuilder;
+import lib.requests.current_weather.CurrentWeatherModel;
+import lib.requests.current_weather.CurrentWeatherResponseMethods;
+import lib.requests.current_weather.RequestToCurrentWeather;
+import lib.requests.current_weather.current_data.Cities;
+import lib.requests.current_weather.current_data.CurrentExpectedModelBuilder;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Также;
 import io.cucumber.java.ru.Тогда;

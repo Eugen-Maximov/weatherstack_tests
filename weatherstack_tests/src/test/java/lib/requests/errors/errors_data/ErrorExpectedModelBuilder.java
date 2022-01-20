@@ -1,8 +1,8 @@
-package hard_implementation.lib.requests.errors.errors_data;
+package lib.requests.errors.errors_data;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import groovy.json.JsonException;
-import hard_implementation.lib.requests.errors.ErrorModel;
+import lib.requests.errors.ErrorModel;
 
 import java.io.IOException;
 import java.nio.file.Paths;

@@ -1,4 +1,4 @@
-package hard_implementation.lib.requests.errors.errors_data;
+package lib.requests.errors.errors_data;
 
 public enum Errors {
 

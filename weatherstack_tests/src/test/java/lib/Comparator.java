@@ -1,4 +1,4 @@
-package hard_implementation.lib;
+package lib;
 
 import org.assertj.core.api.SoftAssertionError;
 import org.assertj.core.api.SoftAssertions;

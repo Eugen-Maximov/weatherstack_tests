@@ -1,4 +1,4 @@
-package hard_implementation.lib;
+package lib;
 
 
 import io.qameta.allure.Step;

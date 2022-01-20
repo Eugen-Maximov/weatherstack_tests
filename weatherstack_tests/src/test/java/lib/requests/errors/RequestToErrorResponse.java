@@ -1,7 +1,7 @@
-package hard_implementation.lib.requests.errors;
+package lib.requests.errors;
 
-import hard_implementation.lib.requests.GetRequest;
-import hard_implementation.lib.requests.SpecCreator;
+import lib.requests.GetRequest;
+import lib.requests.SpecCreator;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 

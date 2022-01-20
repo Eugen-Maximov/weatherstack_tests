@@ -1,4 +1,4 @@
-package hard_implementation.lib.requests.errors;
+package lib.requests.errors;
 
 
 public class ErrorModel {

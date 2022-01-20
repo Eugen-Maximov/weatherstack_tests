@@ -1,4 +1,4 @@
-package hard_implementation.API;
+package API;
 
 import io.qameta.allure.Step;
 import io.restassured.RestAssured;

@@ -1,7 +1,7 @@
-package hard_implementation.API;
+package API;
 
 import io.restassured.RestAssured;
-import hard_implementation.lib.CoreTestCase;
+import lib.CoreTestCase;
 import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.MockWebServer;
 

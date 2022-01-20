@@ -1,9 +1,9 @@
-package hard_implementation.lib.requests.current_weather.current_data;
+package lib.requests.current_weather.current_data;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import groovy.json.JsonException;
-import hard_implementation.lib.methods.TimeConverter;
-import hard_implementation.lib.requests.current_weather.CurrentWeatherModel;
+import lib.methods.TimeConverter;
+import lib.requests.current_weather.CurrentWeatherModel;
 import io.qameta.allure.Step;
 
 import java.io.IOException;

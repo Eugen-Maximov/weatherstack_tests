@@ -1,4 +1,4 @@
-package hard_implementation.suites;
+package suites;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;

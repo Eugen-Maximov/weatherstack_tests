@@ -1,6 +1,6 @@
-package hard_implementation.lib.requests;
+package lib.requests;
 
-import hard_implementation.API.APIAuth;
+import API.APIAuth;
 import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;
 

@@ -1,9 +1,9 @@
-package hard_implementation.suites;
+package suites;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
-import hard_implementation.tests.NegativeTest;
-import hard_implementation.tests.PositiveTest;
+import tests.NegativeTest;
+import tests.PositiveTest;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({

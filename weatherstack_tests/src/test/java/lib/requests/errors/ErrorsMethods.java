@@ -1,14 +1,14 @@
-package hard_implementation.lib.requests.errors;
+package lib.requests.errors;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import groovy.json.JsonException;
-import hard_implementation.lib.Comparator;
+import lib.Comparator;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
-import static hard_implementation.lib.Comparator.equalCompare;
-import static hard_implementation.lib.Comparator.statusCodeAssert;
+import static lib.Comparator.equalCompare;
+import static lib.Comparator.statusCodeAssert;
 
 public class ErrorsMethods {
 

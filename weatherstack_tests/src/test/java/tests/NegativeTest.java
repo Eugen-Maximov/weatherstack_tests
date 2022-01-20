@@ -1,11 +1,11 @@
-package hard_implementation.tests;
+package tests;
 
-import hard_implementation.lib.requests.current_weather.current_data.Cities;
-import hard_implementation.lib.requests.errors.ErrorModel;
-import hard_implementation.lib.requests.errors.ErrorsMethods;
-import hard_implementation.lib.requests.errors.RequestToErrorResponse;
-import hard_implementation.lib.requests.errors.errors_data.ErrorExpectedModelBuilder;
-import hard_implementation.lib.requests.errors.errors_data.Errors;
+import lib.requests.current_weather.current_data.Cities;
+import lib.requests.errors.ErrorModel;
+import lib.requests.errors.ErrorsMethods;
+import lib.requests.errors.RequestToErrorResponse;
+import lib.requests.errors.errors_data.ErrorExpectedModelBuilder;
+import lib.requests.errors.errors_data.Errors;
 import io.restassured.response.Response;
 import org.junit.Test;
 

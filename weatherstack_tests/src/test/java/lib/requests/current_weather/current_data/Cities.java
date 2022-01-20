@@ -1,4 +1,4 @@
-package hard_implementation.lib.requests.current_weather.current_data;
+package lib.requests.current_weather.current_data;
 
 public enum Cities {
     NEW_YORK("New York", "src/test/java/test_data/city_bodies/new_york_body.json"),
