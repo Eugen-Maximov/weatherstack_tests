@@ -18,7 +18,7 @@ public class CoreTestCase {
      */
 
     @Before
-    public static void setUp() {
+    public void setUp() {
         setDefaultUri();
     }
 
