@@ -10,7 +10,6 @@ import java.util.List;
 
 public class RequestMethods {
 
-    private List<RequestSpecification> requestSpec;
     private final String requestPath = RequestSpecCreator.requestPath;
     public static List<Response> actualResponses;
 
@@ -18,7 +17,7 @@ public class RequestMethods {
     @Given("send GET requests")
     public void sendGetRequests() {
         RequestSpecCreator.mergeSpecs();
-        requestSpec = RequestSpecCreator.requestSpecs;
+        List<RequestSpecification> requestSpec = RequestSpecCreator.requestSpecs;
         actualResponses = new ArrayList<>();
         for (RequestSpecification spec : requestSpec) {
             actualResponses.add(

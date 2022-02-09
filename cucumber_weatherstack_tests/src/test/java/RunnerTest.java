@@ -6,7 +6,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/scenarios",
         glue = {"lib"},
-        tags = "@positive",
         snippets = CucumberOptions.SnippetType.UNDERSCORE
 )
 public class RunnerTest {

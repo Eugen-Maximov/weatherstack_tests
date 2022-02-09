@@ -1,10 +1,8 @@
 package lib.methods;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import groovy.json.JsonException;
 import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
+import lib.models.ModelParser;
 import lib.models.Models;
 
 import java.util.ArrayList;
@@ -15,36 +13,22 @@ public class ResponseMethods {
 
     private List<Response> responses;
     private List<String> jsonBodies;
-    private int responsesCount;
     private String requestName;
-    private Class parseClass;
-    public static Object actualResponseBody;
-    public static Object expectedResponseBody;
+    public static Class parseClass;
+    public static List<Object> actualResponses;
+
 
     @Then("^(.+) request get response body after sending GET request$")
     public void processingResponseBody(String requestName) {
         this.requestName = requestName;
         responses = RequestMethods.actualResponses;
-        responsesCount = responses.size();
         selectClassToParseModel();
         getJsonStrings();
-
+        parseModels();
     }
 
-
-    private List<Object> parseModels() {
-        List<Object> modelsList = new ArrayList<>();
-        for (String s : jsonBodies) {
-            ObjectMapper mapper = new ObjectMapper();
-            try {
-                modelsList.add(
-                        mapper.readValue(s, parseClass)
-                );
-            } catch (JsonProcessingException e) {
-                throw new JsonException("Cannot parse response body.\nYour body: \n" + s);
-            }
-        }
-        return modelsList;
+    private void parseModels() {
+        actualResponses = ModelParser.parseModel(jsonBodies, parseClass);
     }
 
     private void selectClassToParseModel() {

@@ -3,7 +3,7 @@ package lib.models;
 public enum Models {
 
     CURRENT ("current", CurrentWeatherModel.class),
-    ERROR ("error", CurrentWeatherModel.class);
+    ERROR ("error", ErrorModel.class);
 
     private String name;
     private Class modelClass;

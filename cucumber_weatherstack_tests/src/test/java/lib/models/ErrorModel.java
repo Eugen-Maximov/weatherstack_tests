@@ -3,7 +3,7 @@ package lib.models;
 import java.util.Objects;
 
 public class ErrorModel {
-    private String success;
+    private Boolean success;
     private Error error;
 
     @Override
@@ -12,7 +12,7 @@ public class ErrorModel {
         if (o == null || getClass() != o.getClass()) return false;
         ErrorModel that = (ErrorModel) o;
         return success.equals(that.success)
-                && error.equals(that.error);
+                && error.equals(that.getError());
     }
 
     @Override
@@ -68,7 +68,7 @@ public class ErrorModel {
     }
 
     //setters
-    public ErrorModel setSuccess(String success) {
+    public ErrorModel setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -79,7 +79,7 @@ public class ErrorModel {
     }
 
     //getters
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return success;
     }
 

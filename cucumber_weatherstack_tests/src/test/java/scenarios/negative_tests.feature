@@ -1,22 +1,19 @@
-Feature: Send GET request to weather from 1 cities
+Feature: Check 4 errors
 
-  Background:
-    Given get API key for request
-
-    # Example test
-  @positive
-  Scenario: Send request to current weather by 1 city
+  @negative
+  Scenario: Get 601 error
     Given request path is current
+    * get API key for request
     * request city parameter is
-      | Moscow |
+      | qwerty |
     * request auth parameter ia added
     * send GET request
-    When Current request get response body after sending GET request
-    Then compare responses with expected result
+    When Error request get response body after sending GET request
+    Then create expected model by
+      | code_601 |
     * responses bodies match
 
-  @positive
-  # The second example has three steps
+  @negative
   Scenario: Send request to current weather by 4 cities
     Given request path is current
     * request city parameter is
@@ -27,5 +24,9 @@ Feature: Send GET request to weather from 1 cities
     * request auth parameter ia added
     * send GET requests
     When Current request get response body after sending GET request
-    Then compare responses with expected result
+    Then create expected models by
+      | code_101 |
+      | code_601 |
+      | code_103 |
+      | code_615 |
     * responses bodies match

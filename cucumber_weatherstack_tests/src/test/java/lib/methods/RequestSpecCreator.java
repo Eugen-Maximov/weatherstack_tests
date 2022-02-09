@@ -14,6 +14,7 @@ public class RequestSpecCreator {
     private static RequestSpecification authSpec = RestAssured.given();
     public static String requestPath;
     public static List<RequestSpecification> requestSpecs;
+    public static List<String> citiesNames;
 
     @Given("^request path is (.+)$")
     public void setRequestPath(String requestPath) {
@@ -22,6 +23,7 @@ public class RequestSpecCreator {
 
     @Given("request city parameter is")
     public void setCityParam(List<String> cityName) {
+        citiesNames = new ArrayList<>(cityName);
         querySpecs = new ArrayList<>();
         for (String s : cityName) {
             querySpecs.add(
