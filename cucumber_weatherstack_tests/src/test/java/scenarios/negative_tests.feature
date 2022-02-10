@@ -5,7 +5,7 @@ Feature: Check 4 errors
     Given request path is current
     * get API key for request
     * request city parameter is
-      | qwerty |
+      |  |
     * request auth parameter ia added
     * send GET request
     When Error request get response body after sending GET request
@@ -17,10 +17,10 @@ Feature: Check 4 errors
   Scenario: Send request to current weather by 4 cities
     Given request path is current
     * request city parameter is
-      | Moscow   |
-      | New York |
-      | Berlin   |
-      | London   |
+      |        |
+      | qwerty |
+      | Berlin |
+      | London |
     * request auth parameter ia added
     * send GET requests
     When Current request get response body after sending GET request

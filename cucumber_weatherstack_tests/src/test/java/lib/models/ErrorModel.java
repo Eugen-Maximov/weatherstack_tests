@@ -1,44 +1,15 @@
 package lib.models;
 
-import java.util.Objects;
-
 public class ErrorModel {
     private Boolean success;
     private Error error;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ErrorModel that = (ErrorModel) o;
-        return success.equals(that.success)
-                && error.equals(that.getError());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(success, error);
-    }
 
     public static class Error {
         private Integer code;
         private String type;
         private String info;
 
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Error error = (Error) o;
-            return code.equals(error.code)
-                    && type.equals(error.type)
-                    && info.equals(error.info);
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(code, type, info);
-        }
 
         //setters
         public void setCode(Integer code) {

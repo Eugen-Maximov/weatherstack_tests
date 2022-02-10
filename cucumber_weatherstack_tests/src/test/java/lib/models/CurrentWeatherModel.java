@@ -9,42 +9,11 @@ public class CurrentWeatherModel {
     public Location location;
     public Current current;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        CurrentWeatherModel that = (CurrentWeatherModel) o;
-        return Objects.equals(request, that.request)
-                && Objects.equals(location, that.location)
-                && Objects.equals(current, that.current);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(request, location, current);
-    }
-
     public static class Request {
         private String type;
         private String query;
         private String language;
         private String unit;
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Request request = (Request) o;
-            return Objects.equals(type, request.type)
-                    && Objects.equals(query, request.query)
-                    && Objects.equals(language, request.language)
-                    && Objects.equals(unit, request.unit);
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(type, query, language, unit);
-        }
 
         //setters
         public Request setType(String type) {
@@ -96,25 +65,6 @@ public class CurrentWeatherModel {
         private Long localtime_epoch;
         private String utc_offset;
 
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Location location = (Location) o;
-            return name.equals(location.name)
-                    && country.equals(location.country)
-                    && region.equals(location.region)
-                    && lat.equals(location.lat) && lon.equals(location.lon)
-                    && timezone_id.equals(location.timezone_id)
-                    && localtime.equals(location.localtime)
-                    && localtime_epoch.equals(location.localtime_epoch)
-                    && utc_offset.equals(location.utc_offset);
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(name, country, region, lat, lon, timezone_id, localtime, localtime_epoch, utc_offset);
-        }
 
         //setters
         public Location setName(String name) {
@@ -218,33 +168,6 @@ public class CurrentWeatherModel {
         private Number visibility;
         private String is_day;
 
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Current current = (Current) o;
-            return Objects.equals(observation_time, current.observation_time)
-                    && Objects.equals(temperature, current.temperature)
-                    && Objects.equals(weather_code, current.weather_code)
-                    && Objects.equals(weather_icons, current.weather_icons)
-                    && Objects.equals(weather_descriptions, current.weather_descriptions)
-                    && Objects.equals(wind_speed, current.wind_speed)
-                    && Objects.equals(wind_degree, current.wind_degree)
-                    && Objects.equals(wind_dir, current.wind_dir)
-                    && Objects.equals(pressure, current.pressure)
-                    && Objects.equals(precip, current.precip)
-                    && Objects.equals(humidity, current.humidity)
-                    && Objects.equals(cloudcover, current.cloudcover)
-                    && Objects.equals(feelslike, current.feelslike)
-                    && Objects.equals(uv_index, current.uv_index)
-                    && Objects.equals(visibility, current.visibility)
-                    && Objects.equals(is_day, current.is_day);
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(observation_time, temperature, weather_code, weather_icons, weather_descriptions, wind_speed, wind_degree, wind_dir, pressure, precip, humidity, cloudcover, feelslike, uv_index, visibility, is_day);
-        }
 
         //setters
         public Current setObservation_time(String observation_time) {

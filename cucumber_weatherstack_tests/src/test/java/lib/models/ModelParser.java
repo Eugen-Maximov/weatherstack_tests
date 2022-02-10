@@ -1,7 +1,6 @@
 package lib.models;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import groovy.json.JsonException;
 
@@ -18,6 +17,7 @@ public class ModelParser {
         List<Object> results = new ArrayList<>();
         for (String s : jsonBodies) {
             try {
+                System.out.println(s);
                 results.add(
                         createObject(s, classToParse)
                 );
