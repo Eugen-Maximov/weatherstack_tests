@@ -11,7 +11,7 @@ Feature: Negative Tests
     * send GET request
     When Error request get response body after sending GET request
     Then create expected model by
-      | code_601 |
+      | code 601 |
     * responses bodies match
 
   #No auth token - 101 error
@@ -23,7 +23,7 @@ Feature: Negative Tests
     * send GET request
     When Error request get response body after sending GET request
     Then create expected model by
-      | code_101 |
+      | code 101 |
     * responses bodies match
 
   #Invalide path - 103 error
@@ -36,7 +36,7 @@ Feature: Negative Tests
     * send GET request
     When Error request get response body after sending GET request
     Then create expected model by
-      | code_103 |
+      | code 103 |
     * responses bodies match
 
 
@@ -50,5 +50,5 @@ Feature: Negative Tests
     * send GET request
     When Error request get response body after sending GET request
     Then create expected model by
-      | code_615   |
+      | code 615 |
     * responses bodies match

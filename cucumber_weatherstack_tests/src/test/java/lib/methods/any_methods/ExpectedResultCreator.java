@@ -17,7 +17,7 @@ import java.util.Locale;
 public class ExpectedResultCreator {
 
     private Class classToParse = ResponseMethods.parseClass;
-    private List<String> names;
+    public static List<String> names;
     public static List<Object> expectedModels;
 
 
@@ -63,7 +63,8 @@ public class ExpectedResultCreator {
     }
 
     private void selectErrorModel(String name) {
-        switch (ErrorsExamples.valueOf(name.toUpperCase(Locale.ROOT))) {
+        name = formatStrings(name);
+        switch (ErrorsExamples.valueOf(name)) {
             case CODE_101:
                 expectedModels.add(ModelParser.parseModel(ErrorsExamples.CODE_101.getJson(), classToParse));
                 break;
@@ -83,13 +84,9 @@ public class ExpectedResultCreator {
     }
 
     private void selectCitiesModel(String name) {
-        String space = " ";
-        String underscore = "_";
         CurrentWeatherModel model;
-        if (name.contains(space)) {
-            name = name.replace(space, underscore);
-        }
-        switch (CitiesExamples.valueOf(name.toUpperCase(Locale.ROOT))) {
+        name = formatStrings(name);
+        switch (CitiesExamples.valueOf(name)) {
             case NEW_YORK:
                 model = (CurrentWeatherModel) ModelParser.parseModel(CitiesExamples.NEW_YORK.getJson(), classToParse);
                 setActualDate(model);
@@ -129,5 +126,15 @@ public class ExpectedResultCreator {
                 .getLocation()
                 .setLocaltime_epoch(convertor.getTimestamp());
         return model;
+    }
+
+    private String formatStrings(String name) {
+        String space = " ";
+        String underscore = "_";
+        String result = "";
+        if (name.contains(space)) {
+            result = name.replace(space, underscore);
+        }
+        return result.toUpperCase(Locale.ROOT);
     }
 }

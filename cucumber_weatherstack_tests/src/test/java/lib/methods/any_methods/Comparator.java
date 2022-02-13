@@ -26,10 +26,12 @@ public class Comparator {
     private void assertEqualsBodies() {
         List<Object> actual = ResponseMethods.actualResponses;
         List<Object> expected = ExpectedResultCreator.expectedModels;
+        List<String> modelNames = ExpectedResultCreator.names;
         for (Object o : actual) {
             int i = actual.indexOf(o);
             softly.assertThat(o)
                     .usingRecursiveComparison()
+                    .as("Errors in expected model: " + modelNames.get(i))
                     .isEqualTo(expected.get(i));
         }
     }
