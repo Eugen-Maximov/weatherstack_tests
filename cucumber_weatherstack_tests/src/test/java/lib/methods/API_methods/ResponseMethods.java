@@ -1,6 +1,7 @@
-package lib.methods;
+package lib.methods.API_methods;
 
 import io.cucumber.java.en.Then;
+import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import lib.models.ModelParser;
 import lib.models.Models;
@@ -19,6 +20,7 @@ public class ResponseMethods {
 
 
     @Then("^(.+) request get response body after sending GET request$")
+    @Step("Processing response bodies by type: '{requestName}'")
     public void processingResponseBody(String requestName) {
         this.requestName = requestName;
         responses = RequestMethods.actualResponses;
@@ -27,10 +29,12 @@ public class ResponseMethods {
         parseModels();
     }
 
+    @Step("Parse response bodies to POJO")
     private void parseModels() {
         actualResponses = ModelParser.parseModel(jsonBodies, parseClass);
     }
 
+    @Step("Select class to parse by type")
     private void selectClassToParseModel() {
         String name = requestName.toUpperCase();
         switch (Models.valueOf(name)) {

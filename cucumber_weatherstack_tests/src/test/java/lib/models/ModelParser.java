@@ -17,7 +17,6 @@ public class ModelParser {
         List<Object> results = new ArrayList<>();
         for (String s : jsonBodies) {
             try {
-                System.out.println(s);
                 results.add(
                         createObject(s, classToParse)
                 );

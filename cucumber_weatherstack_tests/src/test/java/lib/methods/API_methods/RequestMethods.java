@@ -1,6 +1,7 @@
-package lib.methods;
+package lib.methods.API_methods;
 
 import io.cucumber.java.en.Given;
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -15,6 +16,7 @@ public class RequestMethods {
 
     @Given("send GET request")
     @Given("send GET requests")
+    @Step("Send GET request")
     public void sendGetRequests() {
         RequestSpecCreator.mergeSpecs();
         List<RequestSpecification> requestSpec = RequestSpecCreator.requestSpecs;
@@ -30,18 +32,6 @@ public class RequestMethods {
         return RestAssured
                 .given()
                 .spec(specification)
-                .log()
-                .uri()
                 .get(requestPath);
-    }
-
-    private Response sendMockGet(RequestSpecification specification) {
-        Response response = RestAssured
-                .given()
-                .spec(specification)
-                .log()
-                .uri()
-                .get(requestPath);
-        return response;
     }
 }

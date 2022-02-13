@@ -24,9 +24,10 @@
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.junit/junit5-engine -->
         <dependency>
-            <groupId>org.junit</groupId>
-            <artifactId>junit5-engine</artifactId>
-            <version>5.0.0-ALPHA</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -88,6 +89,12 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.30</version>
         </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-junit4</artifactId>
+            <version>${allure.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -119,7 +126,6 @@
                     </dependency>
                 </dependencies>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -129,7 +135,6 @@
                     <target>8</target>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
@@ -140,4 +145,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

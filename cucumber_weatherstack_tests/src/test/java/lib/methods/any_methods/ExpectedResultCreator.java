@@ -1,8 +1,11 @@
-package lib.methods;
+package lib.methods.any_methods;
 
 import io.cucumber.java.en.Then;
+import io.qameta.allure.Step;
 import lib.data.CitiesExamples;
 import lib.data.ErrorsExamples;
+import lib.methods.API_methods.RequestSpecCreator;
+import lib.methods.API_methods.ResponseMethods;
 import lib.models.CurrentWeatherModel;
 import lib.models.ErrorModel;
 import lib.models.ModelParser;
@@ -20,6 +23,7 @@ public class ExpectedResultCreator {
 
     @Then("^create expected model by$")
     @Then("^create expected models by$")
+    @Step("Create expected models by names")
     public void createExpectedResults(List<String> modelsNames) {
         names = modelsNames;
         createExpectedResultsByClass();
@@ -27,6 +31,7 @@ public class ExpectedResultCreator {
 
     @Then("^create expected model$")
     @Then("^create expected models$")
+    @Step("Create expected models")
     public void createExpectedResults() {
         names = RequestSpecCreator.citiesNames;
         createExpectedResultsByClass();
@@ -43,12 +48,14 @@ public class ExpectedResultCreator {
         }
     }
 
+    @Step("Create expected cities models")
     private void createCitiesModels() {
         for (String s : names) {
             selectCitiesModel(s);
         }
     }
 
+    @Step("Create expected errors models")
     private void createErrorsModels() {
         for (String s : names) {
             selectErrorModel(s);
@@ -78,25 +85,49 @@ public class ExpectedResultCreator {
     private void selectCitiesModel(String name) {
         String space = " ";
         String underscore = "_";
+        CurrentWeatherModel model;
         if (name.contains(space)) {
             name = name.replace(space, underscore);
         }
         switch (CitiesExamples.valueOf(name.toUpperCase(Locale.ROOT))) {
             case NEW_YORK:
-                expectedModels.add(ModelParser.parseModel(CitiesExamples.NEW_YORK.getJson(), classToParse));
+                model = (CurrentWeatherModel) ModelParser.parseModel(CitiesExamples.NEW_YORK.getJson(), classToParse);
+                setActualDate(model);
+                expectedModels.add(model);
                 break;
             case MOSCOW:
-                expectedModels.add(ModelParser.parseModel(CitiesExamples.MOSCOW.getJson(), classToParse));
+                model = (CurrentWeatherModel) ModelParser.parseModel(CitiesExamples.MOSCOW.getJson(), classToParse);
+                setActualDate(model);
+                expectedModels.add(model);
                 break;
             case BERLIN:
-                expectedModels.add(ModelParser.parseModel(CitiesExamples.BERLIN.getJson(), classToParse));
+                model = (CurrentWeatherModel) ModelParser.parseModel(CitiesExamples.BERLIN.getJson(), classToParse);
+                setActualDate(model);
+                expectedModels.add(model);
                 break;
             case LONDON:
-                expectedModels.add(ModelParser.parseModel(CitiesExamples.LONDON.getJson(), classToParse));
+                model = (CurrentWeatherModel) ModelParser.parseModel(CitiesExamples.LONDON.getJson(), classToParse);
+                setActualDate(model);
+                expectedModels.add(model);
                 break;
             default:
                 throw new IllegalArgumentException("Cannot detect city name to create expected model.\n" +
                         "Your city: " + name);
         }
+    }
+
+    @Step("Set current date and time to expected model")
+    private CurrentWeatherModel setActualDate(CurrentWeatherModel model) {
+        String timeZone = model
+                .getLocation()
+                .getTimezone_id();
+        DateConvertor convertor = new DateConvertor(timeZone);
+        model
+                .getLocation()
+                .setLocaltime(convertor.getSimpleDate());
+        model
+                .getLocation()
+                .setLocaltime_epoch(convertor.getTimestamp());
+        return model;
     }
 }

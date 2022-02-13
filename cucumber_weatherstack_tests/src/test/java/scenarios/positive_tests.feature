@@ -1,9 +1,9 @@
-Feature: Get current weather
+Feature: Positive Tests
 
   Background:
     Given get API key for request
 
-    # Example test
+  #Example positive test
   @positive
   Scenario: Send request to current weather by 1 city
     Given request path is current
@@ -15,8 +15,8 @@ Feature: Get current weather
     Then create expected model
     * responses bodies match
 
+  #Get current weather by 4 cities
   @positive
-  # The second example has three steps
   Scenario: Send request to current weather by 4 cities
     Given request path is current
     * request city parameter is

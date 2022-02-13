@@ -1,7 +1,6 @@
 package lib.models;
 
 import java.util.List;
-import java.util.Objects;
 
 public class CurrentWeatherModel {
 
