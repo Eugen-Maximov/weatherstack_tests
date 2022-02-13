@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="RunnerTest" time="14.49" tests="6" errors="2" skipped="0" failures="3">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.class.path" value="C:\Users\Eugen\Documents\GitKraken\weatherstack_tests\cucumber_weatherstack_tests\target\test-classes;C:\Users\Eugen\Documents\GitKraken\weatherstack_tests\cucumber_weatherstack_tests\target\classes;C:\Users\Eugen\.m2\repository\io\cucumber\cucumber-java\7.0.0\cucumber-java-7.0.0.jar;C:\Users\Eugen\.m2\repository\io\cucumber\cucumber-core\7.0.0\cucumber-core-7.0.0.jar;C:\Users\Eugen\.m2\repository\io\cucumber\cucumber-gherkin\7.0.0\cucumber-gherkin-7.0.0.jar;C:\Users\Eugen\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.0.0\cucumber-gherkin-messages-7.0.0.jar;C:\Users\Eugen\.m2\repository\io\cucumber\messages\17.1.1\messages-17.1.1.jar;C:\Users\Eugen\.m2\repository\io\cucumber\tag-expressions\4.0.2\tag-expressions-4.0.2.jar;C:\Users\Eugen\.m2\repository\io\cucumber\cucumber-expressions\13.0.1\cucumber-expressions-13.0.1.jar;C:\Users\Eugen\.m2\repository\io\cucumber\datatable\7.0.0\datatable-7.0.0.jar;C:\Users\Eugen\.m2\repository\io\cucumber\cucumber-plugin\7.0.0\cucumber-plugin-7.0.0.jar;C:\Users\Eugen\.m2\repository\io\cucumber\docstring\7.0.0\docstring-7.0.0.jar;C:\Users\Eugen\.m2\repository\io\cucumber\html-formatter\17.0.0\html-formatter-17.0.0.jar;C:\Users\Eugen\.m2\repository\io\cucumber\create-meta\6.0.1\create-meta-6.0.1.jar;C:\Users\Eugen\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Eugen\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Eugen\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Eugen\.m2\repository\io\cucumber\cucumber-junit\7.2.3\cucumber-junit-7.2.3.jar;C:\Users\Eugen\.m2\repository\io\rest-assured\rest-assured\4.4.0\rest-assured-4.4.0.jar;C:\Users\Eugen\.m2\repository\org\codehaus\groovy\groovy\3.0.8\groovy-3.0.8.jar;C:\Users\Eugen\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.8\groovy-xml-3.0.8.jar;C:\Users\Eugen\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Eugen\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Eugen\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Eugen\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Eugen\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Eugen\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\Eugen\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Eugen\.m2\repository\io\rest-assured\json-path\4.4.0\json-path-4.4.0.jar;C:\Users\Eugen\.m2\repository\org\codehaus\groovy\groovy-json\3.0.8\groovy-json-3.0.8.jar;C:\Users\Eugen\.m2\repository\io\rest-assured\rest-assured-common\4.4.0\rest-assured-common-4.4.0.jar;C:\Users\Eugen\.m2\repository\io\rest-assured\xml-path\4.4.0\xml-path-4.4.0.jar;C:\Users\Eugen\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\Eugen\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\Eugen\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\Eugen\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\Eugen\.m2\repository\io\rest-assured\json-schema-validator\4.4.0\json-schema-validator-4.4.0.jar;C:\Users\Eugen\.m2\repository\com\github\java-json-tools\json-schema-validator\2.2.14\json-schema-validator-2.2.14.jar;C:\Users\Eugen\.m2\repository\com\google\guava\guava\28.2-android\guava-28.2-android.jar;C:\Users\Eugen\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\Eugen\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Eugen\.m2\repository\org\checkerframework\checker-compat-qual\2.5.5\checker-compat-qual-2.5.5.jar;C:\Users\Eugen\.m2\repository\com\google\errorprone\error_prone_annotations\2.3.4\error_prone_annotations-2.3.4.jar;C:\Users\Eugen\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\Eugen\.m2\repository\com\github\java-json-tools\jackson-coreutils-equivalence\1.0\jackson-coreutils-equivalence-1.0.jar;C:\Users\Eugen\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\Eugen\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\Eugen\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\Eugen\.m2\repository\com\github\java-json-tools\json-schema-core\1.2.14\json-schema-core-1.2.14.jar;C:\Users\Eugen\.m2\repository\com\github\java-json-tools\uri-template\0.10\uri-template-0.10.jar;C:\Users\Eugen\.m2\repository\org\mozilla\rhino\1.7.7.2\rhino-1.7.7.2.jar;C:\Users\Eugen\.m2\repository\com\sun\mail\mailapi\1.6.2\mailapi-1.6.2.jar;C:\Users\Eugen\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Users\Eugen\.m2\repository\com\googlecode\libphonenumber\libphonenumber\8.11.1\libphonenumber-8.11.1.jar;C:\Users\Eugen\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Eugen\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\Eugen\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.3\jackson-core-2.12.3.jar;C:\Users\Eugen\.m2\repository\org\assertj\assertj-core\3.20.2\assertj-core-3.20.2.jar;C:\Users\Eugen\.m2\repository\com\squareup\okhttp3\mockwebserver\4.9.0\mockwebserver-4.9.0.jar;C:\Users\Eugen\.m2\repository\com\squareup\okhttp3\okhttp\4.9.0\okhttp-4.9.0.jar;C:\Users\Eugen\.m2\repository\com\squareup\okio\okio\2.8.0\okio-2.8.0.jar;C:\Users\Eugen\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-common\1.4.0\kotlin-stdlib-common-1.4.0.jar;C:\Users\Eugen\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.4.10\kotlin-stdlib-1.4.10.jar;C:\Users\Eugen\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;C:\Users\Eugen\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk8\1.4.10\kotlin-stdlib-jdk8-1.4.10.jar;C:\Users\Eugen\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk7\1.4.10\kotlin-stdlib-jdk7-1.4.10.jar;C:\Users\Eugen\.m2\repository\org\aspectj\aspectjweaver\1.9.5\aspectjweaver-1.9.5.jar;C:\Users\Eugen\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Eugen\.m2\repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar;C:\Users\Eugen\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\Eugen\.m2\repository\io\qameta\allure\allure-junit4\2.13.6\allure-junit4-2.13.6.jar;C:\Users\Eugen\.m2\repository\io\qameta\allure\allure-java-commons\2.13.6\allure-java-commons-2.13.6.jar;C:\Users\Eugen\.m2\repository\io\qameta\allure\allure-model\2.13.6\allure-model-2.13.6.jar;C:\Users\Eugen\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.2\jackson-databind-2.11.2.jar;C:\Users\Eugen\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.2\jackson-annotations-2.11.2.jar;C:\Users\Eugen\.m2\repository\org\apache\tika\tika-core\1.24.1\tika-core-1.24.1.jar;C:\Users\Eugen\.m2\repository\org\jooq\joor-java-8\0.9.13\joor-java-8-0.9.13.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_281\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\Eugen\AppData\Local\Temp\surefire4832680748386319731\surefirebooter4229883441440617288.jar C:\Users\Eugen\AppData\Local\Temp\surefire4832680748386319731 2022-02-13T15-08-35_965-jvmRun1 surefire7837333653467161308tmp surefire_08571095172441985181tmp"/>
+    <property name="test" value="RunnerTest"/>
+    <property name="surefire.test.class.path" value="C:\Users\Eugen\Documents\GitKraken\weatherstack_tests\cucumber_weatherstack_tests\target\test-classes;C:\Users\Eugen\Documents\GitKraken\weatherstack_tests\cucumber_weatherstack_tests\target\classes;C:\Users\Eugen\.m2\repository\io\cucumber\cucumber-java\7.0.0\cucumber-java-7.0.0.jar;C:\Users\Eugen\.m2\repository\io\cucumber\cucumber-core\7.0.0\cucumber-core-7.0.0.jar;C:\Users\Eugen\.m2\repository\io\cucumber\cucumber-gherkin\7.0.0\cucumber-gherkin-7.0.0.jar;C:\Users\Eugen\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.0.0\cucumber-gherkin-messages-7.0.0.jar;C:\Users\Eugen\.m2\repository\io\cucumber\messages\17.1.1\messages-17.1.1.jar;C:\Users\Eugen\.m2\repository\io\cucumber\tag-expressions\4.0.2\tag-expressions-4.0.2.jar;C:\Users\Eugen\.m2\repository\io\cucumber\cucumber-expressions\13.0.1\cucumber-expressions-13.0.1.jar;C:\Users\Eugen\.m2\repository\io\cucumber\datatable\7.0.0\datatable-7.0.0.jar;C:\Users\Eugen\.m2\repository\io\cucumber\cucumber-plugin\7.0.0\cucumber-plugin-7.0.0.jar;C:\Users\Eugen\.m2\repository\io\cucumber\docstring\7.0.0\docstring-7.0.0.jar;C:\Users\Eugen\.m2\repository\io\cucumber\html-formatter\17.0.0\html-formatter-17.0.0.jar;C:\Users\Eugen\.m2\repository\io\cucumber\create-meta\6.0.1\create-meta-6.0.1.jar;C:\Users\Eugen\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Eugen\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Eugen\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Eugen\.m2\repository\io\cucumber\cucumber-junit\7.2.3\cucumber-junit-7.2.3.jar;C:\Users\Eugen\.m2\repository\io\rest-assured\rest-assured\4.4.0\rest-assured-4.4.0.jar;C:\Users\Eugen\.m2\repository\org\codehaus\groovy\groovy\3.0.8\groovy-3.0.8.jar;C:\Users\Eugen\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.8\groovy-xml-3.0.8.jar;C:\Users\Eugen\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Eugen\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Eugen\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Eugen\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Eugen\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Eugen\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\Eugen\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Eugen\.m2\repository\io\rest-assured\json-path\4.4.0\json-path-4.4.0.jar;C:\Users\Eugen\.m2\repository\org\codehaus\groovy\groovy-json\3.0.8\groovy-json-3.0.8.jar;C:\Users\Eugen\.m2\repository\io\rest-assured\rest-assured-common\4.4.0\rest-assured-common-4.4.0.jar;C:\Users\Eugen\.m2\repository\io\rest-assured\xml-path\4.4.0\xml-path-4.4.0.jar;C:\Users\Eugen\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\Eugen\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\Eugen\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\Eugen\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\Eugen\.m2\repository\io\rest-assured\json-schema-validator\4.4.0\json-schema-validator-4.4.0.jar;C:\Users\Eugen\.m2\repository\com\github\java-json-tools\json-schema-validator\2.2.14\json-schema-validator-2.2.14.jar;C:\Users\Eugen\.m2\repository\com\google\guava\guava\28.2-android\guava-28.2-android.jar;C:\Users\Eugen\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\Eugen\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Eugen\.m2\repository\org\checkerframework\checker-compat-qual\2.5.5\checker-compat-qual-2.5.5.jar;C:\Users\Eugen\.m2\repository\com\google\errorprone\error_prone_annotations\2.3.4\error_prone_annotations-2.3.4.jar;C:\Users\Eugen\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\Eugen\.m2\repository\com\github\java-json-tools\jackson-coreutils-equivalence\1.0\jackson-coreutils-equivalence-1.0.jar;C:\Users\Eugen\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\Eugen\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\Eugen\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\Eugen\.m2\repository\com\github\java-json-tools\json-schema-core\1.2.14\json-schema-core-1.2.14.jar;C:\Users\Eugen\.m2\repository\com\github\java-json-tools\uri-template\0.10\uri-template-0.10.jar;C:\Users\Eugen\.m2\repository\org\mozilla\rhino\1.7.7.2\rhino-1.7.7.2.jar;C:\Users\Eugen\.m2\repository\com\sun\mail\mailapi\1.6.2\mailapi-1.6.2.jar;C:\Users\Eugen\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Users\Eugen\.m2\repository\com\googlecode\libphonenumber\libphonenumber\8.11.1\libphonenumber-8.11.1.jar;C:\Users\Eugen\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Eugen\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\Eugen\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.3\jackson-core-2.12.3.jar;C:\Users\Eugen\.m2\repository\org\assertj\assertj-core\3.20.2\assertj-core-3.20.2.jar;C:\Users\Eugen\.m2\repository\com\squareup\okhttp3\mockwebserver\4.9.0\mockwebserver-4.9.0.jar;C:\Users\Eugen\.m2\repository\com\squareup\okhttp3\okhttp\4.9.0\okhttp-4.9.0.jar;C:\Users\Eugen\.m2\repository\com\squareup\okio\okio\2.8.0\okio-2.8.0.jar;C:\Users\Eugen\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-common\1.4.0\kotlin-stdlib-common-1.4.0.jar;C:\Users\Eugen\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.4.10\kotlin-stdlib-1.4.10.jar;C:\Users\Eugen\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;C:\Users\Eugen\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk8\1.4.10\kotlin-stdlib-jdk8-1.4.10.jar;C:\Users\Eugen\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk7\1.4.10\kotlin-stdlib-jdk7-1.4.10.jar;C:\Users\Eugen\.m2\repository\org\aspectj\aspectjweaver\1.9.5\aspectjweaver-1.9.5.jar;C:\Users\Eugen\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Eugen\.m2\repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar;C:\Users\Eugen\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\Eugen\.m2\repository\io\qameta\allure\allure-junit4\2.13.6\allure-junit4-2.13.6.jar;C:\Users\Eugen\.m2\repository\io\qameta\allure\allure-java-commons\2.13.6\allure-java-commons-2.13.6.jar;C:\Users\Eugen\.m2\repository\io\qameta\allure\allure-model\2.13.6\allure-model-2.13.6.jar;C:\Users\Eugen\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.2\jackson-databind-2.11.2.jar;C:\Users\Eugen\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.2\jackson-annotations-2.11.2.jar;C:\Users\Eugen\.m2\repository\org\apache\tika\tika-core\1.24.1\tika-core-1.24.1.jar;C:\Users\Eugen\.m2\repository\org\jooq\joor-java-8\0.9.13\joor-java-8-0.9.13.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="allure.results.directory" value="C:\Users\Eugen\Documents\GitKraken\weatherstack_tests\cucumber_weatherstack_tests\target/allure-results"/>
+    <property name="user.home" value="C:\Users\Eugen"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_281\jre"/>
+    <property name="basedir" value="C:\Users\Eugen\Documents\GitKraken\weatherstack_tests\cucumber_weatherstack_tests"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\Eugen\AppData\Local\Temp\surefire4832680748386319731\surefirebooter4229883441440617288.jar;C:\Users\Eugen\.m2\repository/org/aspectj/aspectjweaver/1.9.5/aspectjweaver-1.9.5.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_281\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_281\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_281-b09"/>
+    <property name="user.name" value="Eugen"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_281\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Eugen\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Eugen\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_281"/>
+    <property name="user.dir" value="C:\Users\Eugen\Documents\GitKraken\weatherstack_tests\cucumber_weatherstack_tests"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_281\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python39\Scripts\;C:\Python39\;C:\Users\Eugen\AppData\Local\Android\Sdk\emulator;C:\Users\Eugen\AppData\Local\Android\Sdk\tools;C:\Users\Eugen\AppData\Local\Android\Sdk\tools\bin;C:\Users\Eugen\AppData\Local\Android\Sdk\platform-tools;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\Eugen\AppData\Local\apache-maven-3.8.1\bin;C:\Program Files\Java\jdk1.8.0_281\;;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\Eugen\AppData\Local\Android\Sdk\emulator;C:\Users\Eugen\AppData\Local\Android\Sdk\tools;C:\Users\Eugen\AppData\Local\Android\Sdk\tools\bin;C:\Users\Eugen\AppData\Local\Android\Sdk\platform-tools;C:\Users\Eugen\scoop\shims;C:\Users\Eugen\AppData\Local\Microsoft\WindowsApps;C:\Users\Eugen\AppData\Local\apache-maven-3.8.1\bin;C:\Program Files\Java\jdk1.8.0_281\;C:\Users\Eugen\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2\bin;C:\Users\Eugen\AppData\Roaming\npm;C:\Users\Eugen\AppData\Local\Microsoft\WindowsApps;C:\Users\Eugen\AppData\Local\gitkraken\bin;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.281-b09"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_281\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="Get 601 error" classname="Negative Tests" time="7.559">
+    <failure message="After the test run, there were discrepancies in the values.&#10;Test failed. Additional information is available in the logs." type="java.lang.AssertionError">java.lang.AssertionError: 
+After the test run, there were discrepancies in the values.
+Test failed. Additional information is available in the logs.
+</failure>
+    <system-err><![CDATA[log4j:WARN No appenders could be found for logger (org.apache.http.impl.conn.BasicClientConnectionManager).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+]]></system-err>
+  </testcase>
+  <testcase name="Get 101 error" classname="Negative Tests" time="0.517"/>
+  <testcase name="Get 103 error" classname="Negative Tests" time="0.751">
+    <failure message="After the test run, there were discrepancies in the values.&#10;Test failed. Additional information is available in the logs." type="java.lang.AssertionError">java.lang.AssertionError: 
+After the test run, there were discrepancies in the values.
+Test failed. Additional information is available in the logs.
+</failure>
+  </testcase>
+  <testcase name="Get 615 error" classname="Negative Tests" time="0.62">
+    <failure message="After the test run, there were discrepancies in the values.&#10;Test failed. Additional information is available in the logs." type="java.lang.AssertionError">java.lang.AssertionError: 
+After the test run, there were discrepancies in the values.
+Test failed. Additional information is available in the logs.
+</failure>
+  </testcase>
+  <testcase name="Send request to current weather by 1 city" classname="Positive Tests" time="0.6">
+    <error message="Cannot parse response body.&#10;Your body: &#10;{&#10;  &quot;success&quot;: false,&#10;  &quot;error&quot;: {&#10;    &quot;code&quot;: 101,&#10;    &quot;type&quot;: &quot;missing_access_key&quot;,&#10;    &quot;info&quot;: &quot;You have not supplied an API Access Key. [Required format: access_key=YOUR_ACCESS_KEY]&quot;&#10;  }&#10;}&#10;&#10;&#10;Unrecognized field &quot;success&quot; (class lib.models.CurrentWeatherModel), not marked as ignorable (3 known properties: &quot;current&quot;, &quot;location&quot;, &quot;request&quot;])&#10; at [Source: (String)&quot;{&#10;  &quot;success&quot;: false,&#10;  &quot;error&quot;: {&#10;    &quot;code&quot;: 101,&#10;    &quot;type&quot;: &quot;missing_access_key&quot;,&#10;    &quot;info&quot;: &quot;You have not supplied an API Access Key. [Required format: access_key=YOUR_ACCESS_KEY]&quot;&#10;  }&#10;}&#10;&quot;; line: 2, column: 19] (through reference chain: lib.models.CurrentWeatherModel[&quot;success&quot;])" type="groovy.json.JsonException">groovy.json.JsonException: 
+Cannot parse response body.
+Your body: 
+{
+  "success": false,
+  "error": {
+    "code": 101,
+    "type": "missing_access_key",
+    "info": "You have not supplied an API Access Key. [Required format: access_key=YOUR_ACCESS_KEY]"
+  }
+}
+
+
+Unrecognized field "success" (class lib.models.CurrentWeatherModel), not marked as ignorable (3 known properties: "current", "location", "request"])
+ at [Source: (String)"{
+  "success": false,
+  "error": {
+    "code": 101,
+    "type": "missing_access_key",
+    "info": "You have not supplied an API Access Key. [Required format: access_key=YOUR_ACCESS_KEY]"
+  }
+}
+"; line: 2, column: 19] (through reference chain: lib.models.CurrentWeatherModel["success"])
+</error>
+  </testcase>
+  <testcase name="Send request to current weather by 4 cities" classname="Positive Tests" time="2.22">
+    <error message="Cannot parse response body.&#10;Your body: &#10;{&#10;  &quot;success&quot;: false,&#10;  &quot;error&quot;: {&#10;    &quot;code&quot;: 101,&#10;    &quot;type&quot;: &quot;missing_access_key&quot;,&#10;    &quot;info&quot;: &quot;You have not supplied an API Access Key. [Required format: access_key=YOUR_ACCESS_KEY]&quot;&#10;  }&#10;}&#10;&#10;&#10;Unrecognized field &quot;success&quot; (class lib.models.CurrentWeatherModel), not marked as ignorable (3 known properties: &quot;current&quot;, &quot;location&quot;, &quot;request&quot;])&#10; at [Source: (String)&quot;{&#10;  &quot;success&quot;: false,&#10;  &quot;error&quot;: {&#10;    &quot;code&quot;: 101,&#10;    &quot;type&quot;: &quot;missing_access_key&quot;,&#10;    &quot;info&quot;: &quot;You have not supplied an API Access Key. [Required format: access_key=YOUR_ACCESS_KEY]&quot;&#10;  }&#10;}&#10;&quot;; line: 2, column: 19] (through reference chain: lib.models.CurrentWeatherModel[&quot;success&quot;])" type="groovy.json.JsonException">groovy.json.JsonException: 
+Cannot parse response body.
+Your body: 
+{
+  "success": false,
+  "error": {
+    "code": 101,
+    "type": "missing_access_key",
+    "info": "You have not supplied an API Access Key. [Required format: access_key=YOUR_ACCESS_KEY]"
+  }
+}
+
+
+Unrecognized field "success" (class lib.models.CurrentWeatherModel), not marked as ignorable (3 known properties: "current", "location", "request"])
+ at [Source: (String)"{
+  "success": false,
+  "error": {
+    "code": 101,
+    "type": "missing_access_key",
+    "info": "You have not supplied an API Access Key. [Required format: access_key=YOUR_ACCESS_KEY]"
+  }
+}
+"; line: 2, column: 19] (through reference chain: lib.models.CurrentWeatherModel["success"])
+</error>
+  </testcase>
+</testsuite>

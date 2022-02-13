@@ -1,0 +1,28 @@
+
+Expecting actual:
+  lib.models.ErrorModel@b814e23
+to be equal to:
+  lib.models.ErrorModel@5f81507a
+when recursively comparing field by field, but found the following 3 differences:
+
+field/property 'error.code' differ:
+- actual value  : 101
+- expected value: 103
+
+field/property 'error.info' differ:
+- actual value  : "You have not supplied an API Access Key. [Required format: access_key=YOUR_ACCESS_KEY]"
+- expected value: "This API Function does not exist."
+
+field/property 'error.type' differ:
+- actual value  : "missing_access_key"
+- expected value: "invalid_api_function"
+
+The recursive comparison was performed with this configuration:
+- no overridden equals methods were used in the comparison (except for java types)
+- these types were compared with the following comparators:
+  - java.lang.Double -> DoubleComparator[precision=1.0E-15]
+  - java.lang.Float -> FloatComparator[precision=1.0E-6]
+  - java.nio.file.Path -> lexicographic comparator (Path natural order)
+- actual and expected objects and their fields were compared field by field recursively even if they were not of the same type, this allows for example to compare a Person to a PersonDto (call strictTypeChecking(true) to change that behavior).
+
+at Comparator.assertEqualsBodies(Comparator.java:33)
