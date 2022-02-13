@@ -13,9 +13,11 @@ import java.util.List;
 
 public class Logger {
 
-    private final String pathName = "target\\logs\\";
+    private final String separator = File.separator;
+    private final String pathName = "target" + separator + "logs" + separator;
+    private Path path;
     private String logsFileName;
-    private final String pathToLogsDirectory = new File(pathName).getAbsolutePath() + "\\";
+    private String pathToLogsDirectory;
     private String testName;
     private List<String> assertErrors;
 
@@ -37,6 +39,8 @@ public class Logger {
     }
 
     private Path createAndroidLogsFile() throws IOException {
+        this.path = Files.createDirectories(Paths.get(pathName));
+        this.pathToLogsDirectory = path.toAbsolutePath() + separator;
         return Files.createFile(Paths.get(pathToLogsDirectory, logsFileName));
     }
 

@@ -12,7 +12,7 @@ import java.util.List;
 public class RequestSpecCreator {
 
     private static List<RequestSpecification> querySpecs;
-    private static RequestSpecification authSpec;
+    private static RequestSpecification authSpec = RestAssured.given();
     public static String requestPath;
     public static List<RequestSpecification> requestSpecs;
     public static List<String> citiesNames;
